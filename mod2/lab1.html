@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Botões - CSS Avançado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Galeria de Botões Interativos</h1>
+            <p>Demonstração de boas práticas CSS com herança, variáveis e seletores contextuais</p>
+        </header>
+
+        <!-- Seção 1: Botões Básicos -->
+        <section class="button-section">
+            <h2>Tipos de Botões</h2>
+            <div class="button-group">
+                <button class="btn btn-primary">Botão Primário</button>
+                <button class="btn btn-alert">Botão de Alerta</button>
+                <a href="#" class="btn btn-outline">Link como Botão</a>
+            </div>
+        </section>
+
+        <!-- Seção 2: Estados de Interação -->
+        <section class="button-section">
+            <h2>Estados de Interação</h2>
+            <p class="section-description">Passe o mouse sobre os botões para ver os efeitos de hover e transições</p>
+            <div class="button-group">
+                <button class="btn btn-primary">Hover Primary</button>
+                <button class="btn btn-alert">Hover Alert</button>
+                <a href="#" class="btn btn-outline">Hover Outline</a>
+            </div>
+        </section>
+
+        <!-- Seção 3: Botão com Ícone -->
+        <section class="button-section">
+            <h2>Botão com Pseudo-Elemento</h2>
+            <p class="section-description">Passe o mouse para ver o ícone de download aparecer</p>
+            <div class="button-group">
+                <button class="btn btn-primary btn-download">Baixar Relatório</button>
+                <button class="btn btn-alert btn-download">Exportar Dados</button>
+                <a href="#" class="btn btn-outline btn-download">Download Arquivo</a>
+            </div>
+        </section>
+
+        <!-- Seção 4: Combinador de Irmão Adjacente -->
+        <section class="button-section">
+            <h2>Espaçamento com Combinador (+)</h2>
+            <p class="section-description">Os botões adjacentes têm espaçamento automático (10px)</p>
+            <div class="button-group">
+                <button class="btn btn-primary">Botão 1</button>
+                <button class="btn btn-primary">Botão 2</button>
+                <button class="btn btn-primary">Botão 3</button>
+            </div>
+        </section>
+
+        <!-- Seção 5: Casos Especiais -->
+        <section class="button-section">
+            <h2>Casos Especiais</h2>
+            
+            <!-- Botões Desabilitados -->
+            <div class="special-case">
+                <h3>Botões Desabilitados (sem efeito hover)</h3>
+                <div class="button-group">
+                    <button class="btn btn-primary btn-disabled" disabled>Desabilitado</button>
+                    <button class="btn btn-alert btn-disabled" disabled>Não Clicável</button>
+                </div>
+            </div>
+
+            <!-- Botão De Sucesso -->
+            <div class="special-case">
+                <h3>Botão de Sucesso</h3>
+                <div class="button-group">
+                    <button class="btn btn-success">✓ Enviar</button>
+                    <button class="btn btn-success">✓ Confirmar</button>
+                </div>
+            </div>
+
+            <!-- Botão de Ação Simples -->
+            <div class="special-case">
+                <h3>Botões Simples</h3>
+                <div class="button-group">
+                    <button class="btn btn-secondary">Cancelar</button>
+                    <button class="btn btn-secondary">Fechar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Demonstração de Variáveis CSS -->
+        <section class="button-section info-section">
+            <h2>📋 Variáveis CSS Utilizadas</h2>
+            <ul>
+                <li><code>--primary-color: #667eea</code></li>
+                <li><code>--alert-color: #e74c3c</code></li>
+                <li><code>--success-color: #27ae60</code></li>
+                <li><code>--secondary-color: #95a5a6</code></li>
+                <li><code>--text-color: #333333</code></li>
+                <li><code>--btn-padding: 12px 24px</code></li>
+                <li><code>--btn-radius: 6px</code></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer com informações técnicas -->
+    <footer class="footer">
+        <p>🔍 Inspecione o código para ver as práticas de CSS avançado em ação</p>
+        <p style="font-size: 12px; margin-top: 10px; opacity: 0.8;">
+            Técnicas utilizadas: Variáveis CSS, Herança, Seletores Contextuais, Pseudo-elementos, Combinadores
+        </p>
+    </footer>
+</body>
+</html>

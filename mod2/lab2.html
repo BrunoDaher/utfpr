@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório 2: Precisão no Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Reset e configuração global */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #eef2f7;
+        color: #1f2937;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .product-card {
+        width: 300px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    }
+
+    .badge {
+        display: inline-block;
+        margin: 16px;
+        padding: 6px 12px;
+        background-color: #f59e0b;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 999px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .product-image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .product-content {
+        padding: 20px;
+    }
+
+    .product-content > * {
+        margin-bottom: 16px;
+    }
+
+    .product-content > *:last-child {
+        margin-bottom: 0;
+    }
+
+    .product-title {
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 12px;
+        line-height: 1.2;
+        color: #111827;
+    }
+
+    .product-description {
+        margin: 0;
+        color: #4b5563;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .product-price {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .price-old {
+        color: #9ca3af;
+        font-size: 14px;
+        text-decoration: line-through;
+    }
+
+    .price-current {
+        color: #111827;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .btn-buy {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 12px;
+        background-color: #2563eb;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: filter 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn-buy:hover {
+        filter: brightness(0.95);
+        background-color: green;
+        transform: translateY(-1px);
+    }
+</style>
+<body>
+
+    <main class="container">
+        
+        <article class="product-card">
+            <div class="badge">Oferta</div>
+            
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=300&h=200" alt="Produto Exemplo" class="product-image">
+            
+            <div class="product-content">
+                <h2 class="product-title">Monitor Gamer 27" Curvo</h2>
+                <p class="product-description">
+                    Experiência imersiva com 144Hz e tempo de resposta de 1ms. O aliado perfeito para suas vitórias.
+                </p>
+                
+                <div class="product-price">
+                    <span class="price-old">R$ 1.890,00</span>
+                    <span class="price-current">R$ 1.450,00</span>
+                </div>
+                
+                <button class="btn-buy">Adicionar ao Carrinho</button>
+            </div>
+        </article>
+        </main>
+
+</body>
+</html>
