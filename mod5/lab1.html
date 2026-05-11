@@ -3,9 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab1 - Módulo 5</title>
+  <title>Lab1 - Galeria Interativa 3D</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    /* Grid de 3 imagens (Tarefa 1) */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    /* Container com perspectiva (Tarefa 3) */
+    .card-container {
+      perspective: 1000px;
+      height: 400px;
+    }
+
+    /* O Card que rotaciona (Tarefa 3) */
+    .card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      /* Transição de 0.3s a 0.5s para suavidade (Tarefa 1) */
+      transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+      border-radius: 12px;
+    }
+
+    /* Efeitos de Zoom, Inclinação e Sombra Dinâmica (Tarefas 1, 2 e 3) */
+    .card:hover {
+      transform: rotateY(180deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Faces do Card (Tarefa 3) */
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden; /* Esconde o verso (Tarefa 3) */
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      transform: rotateY(180deg); /* Face traseira pré-rotacionada */
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .card-back h3 { margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 10px; }
+    .card-back p { margin: 5px 0; font-size: 14px; opacity: 0.9; }
+  </style>
 </head>
 <body>
   <h1>Laboratório 1 - Módulo 5</h1>
+  <h2>🛠️ Laboratório 1: Interatividade 2D/3D</h2>
+
+  <div class="gallery">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="card">
+        <div class="card-front">
+          <img src="https://picsum.photos/id/1018/400/600" alt="Natureza">
+        </div>
+        <div class="card-back">
+          <h3>Montanhas Majestosas</h3>
+          <p><strong>ISO:</strong> 100 | f/8.0</p>
+          <p><strong>Local:</strong> Alpes Suíços</p>
+          <p><strong>Equipamento:</strong> DSLR 4K</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="card">
+        <div class="card-front">
+          <img src="https://picsum.photos/id/1015/400/600" alt="Rio">
+        </div>
+        <div class="card-back">
+          <h3>Rio Sereno</h3>
+          <p><strong>ISO:</strong> 200 | f/4.0</p>
+          <p><strong>Local:</strong> Vale Azul</p>
+          <p><strong>Equipamento:</strong> Mirrorless</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="card">
+        <div class="card-front">
+          <img src="https://picsum.photos/id/1019/400/600" alt="Estrada">
+        </div>
+        <div class="card-back">
+          <h3>Estrada Infinita</h3>
+          <p><strong>ISO:</strong> 400 | f/11</p>
+          <p><strong>Local:</strong> Rota 66</p>
+          <p><strong>Equipamento:</strong> Drone 4K</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

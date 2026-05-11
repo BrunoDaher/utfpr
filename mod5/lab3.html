@@ -3,9 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab3 - Módulo 5</title>
+  <title>Lab3 - UI Moderna Glassmorphism</title>
+  <style>
+    :root {
+      --bg: #0a123d;
+      --surface: rgba(255, 255, 255, 0.14);
+      --surface-strong: rgba(255, 255, 255, 0.22);
+      --border: rgba(255, 255, 255, 0.22);
+      --text: #f8f9ff;
+      --muted: rgba(248, 249, 255, 0.7);
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+      --accent: #83a4ff;
+      --accent-soft: rgba(131, 164, 255, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top left, rgba(131, 164, 255, 0.35), transparent 28%),
+                  radial-gradient(circle at bottom right, rgba(255, 116, 129, 0.35), transparent 22%),
+                  linear-gradient(135deg, #11183a 0%, #0c1234 45%, #170f3b 100%);
+      overflow: hidden;
+    }
+
+    .scene {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      padding: 64px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(10px);
+      opacity: 0.7;
+    }
+
+    .shape.circle-1 {
+      width: 240px;
+      height: 240px;
+      top: 12%;
+      left: 8%;
+      background: rgba(131, 164, 255, 0.18);
+    }
+
+    .shape.circle-2 {
+      width: 180px;
+      height: 180px;
+      top: 30%;
+      right: 12%;
+      background: rgba(252, 120, 120, 0.16);
+    }
+
+    .shape.circle-3 {
+      width: 120px;
+      height: 120px;
+      bottom: 18%;
+      left: 20%;
+      background: rgba(108, 255, 186, 0.18);
+    }
+
+    .shape.circle-4 {
+      width: 320px;
+      height: 320px;
+      bottom: 8%;
+      right: 6%;
+      background: rgba(255, 210, 93, 0.14);
+    }
+
+    .glass-card {
+      position: relative;
+      width: min(1020px, 100%);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      padding: 42px;
+      display: grid;
+      grid-template-columns: minmax(280px, 420px) 1fr;
+      gap: 32px;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0) 60%);
+      mask-image: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+
+    .panel {
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel h1 {
+      font-size: clamp(2.6rem, 3.4vw, 4rem);
+      line-height: 1.02;
+      margin: 0 0 18px;
+    }
+
+    .panel p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin: 0 0 28px;
+      max-width: 540px;
+    }
+
+    .metric {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .metric-card strong {
+      display: block;
+      font-size: 2.6rem;
+      color: var(--text);
+      margin-bottom: 8px;
+      mix-blend-mode: screen;
+      text-shadow: 0 10px 24px rgba(255, 255, 255, 0.12);
+    }
+
+    .metric-card span {
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+    }
+
+    .overview {
+      display: grid;
+      gap: 22px;
+    }
+
+    .overview .status-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 26px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+    }
+
+    .status-card h2 {
+      font-size: 1.15rem;
+      margin: 0 0 14px;
+      color: var(--text);
+    }
+
+    .status-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(102, 126, 234, 0.14);
+      color: #d7dbff;
+      font-size: 0.92rem;
+      width: fit-content;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .glass-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .glass-card {
+        padding: 28px 20px;
+      }
+
+      .panel h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Laboratório 3 - Módulo 5</h1>
+  <section class="scene">
+    <div class="shape circle-1"></div>
+    <div class="shape circle-2"></div>
+    <div class="shape circle-3"></div>
+    <div class="shape circle-4"></div>
+
+    <article class="glass-card">
+      <div class="panel">
+        <span class="tag">Dashboard Glassmorphism</span>
+        <h1>Interface moderna com efeito vidro</h1>
+        <p>Um cartão translúcido que flutua sobre um fundo vibrante, usando blur e bordas suaves para criar profundidade sem comprometer a legibilidade.</p>
+
+        <div class="metric">
+          <div class="metric-card">
+            <strong>82%</strong>
+            <span>Taxa de retenção</span>
+          </div>
+          <div class="metric-card">
+            <strong>4.9k</strong>
+            <span>Usuários ativos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="overview">
+        <div class="status-card">
+          <h2>Performance</h2>
+          <p>O uso de backdrop-filter cria um desfoque suave do que está atrás do cartão, mantendo o conteúdo legível e elegante.</p>
+        </div>
+        <div class="status-card">
+          <h2>Modernidade</h2>
+          <p>As formas abstratas flutuantes testam a transparência do vidro e permitem um contraste rico com a interface.</p>
+        </div>
+      </div>
+    </article>
+  </section>
 </body>
 </html>
