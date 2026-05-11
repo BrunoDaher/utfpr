@@ -5,7 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab3 - Módulo 3</title>
 </head>
+
+<style>
+
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+    
+        margin: 0;
+      padding: 0;
+        background-size: cover;
+      background-image: url('./imgs/fundo.png');
+    }
+
+    .hero{
+        min-height: 100vh;
+        backdrop-filter: brightness(0.3) saturate(0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content{
+      color:white;
+      justify-content: center;
+      justify-items : center;
+      display: grid;
+    }
+
+    h1{
+      color:white;
+
+      font-size: clamp(2rem, 8vw, 5rem);
+      margin-block: 0 2vh;
+    }
+
+    legend{
+      background-color: #0000ff63;
+      color: rgba(255, 255, 255, 0.679);
+        border: 1px solid transparent;
+        width: fit-content;
+            padding: 3px 2vh;
+        border-radius: 5vh;
+    }
+
+    button{
+      background-color: transparent;
+      color: white;
+      padding: 2vh;
+      border: 1px solid white;
+      border-radius: 1vh;
+
+      &.active{
+        background-color: blue;
+        border: 1px solid transparent;
+        color: white;
+      }
+}
+
+*{
+  font-family: sans-serif;
+}
+
+</style>
+
 <body>
-  <h1>Laboratório 3 - Módulo 3</h1>
+  <section class="hero">
+    
+    <div class="hero-content"  style="text-align:center; justify-content: center;" >
+      <legend>Inscrições abertas</legend>
+      <h1 >Formação Fullstack: Do <br>Zero ao profissional</h1>
+      <p>Aprenda as tecnologias mais exigidas pelo mercado com metodologia e profissionais
+        <br>suporte de mentores.
+      </p>
+      <div class="hero-btns">
+        <button class="active">Ver módulos</button>
+        <button>Falar com consultor</button>
+      </div>
+
+    </div>
+  </section>
+  
 </body>
 </html>

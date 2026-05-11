@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod4 Lab1</title>
+</head>
+
+<style>
+  /* --- TAREFA 2: Estilização Padrão (Mobile First) --- */
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin: 0;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+header {
+    height: 10vh; /* Altura proporcional à tela */
+    display: flex;
+    align-items: center;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column; /* Uma coluna no celular */
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.galeria article {
+    background: #e0e0e0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+img {
+    /* 1. Faz a imagem ocupar no máximo a largura do article */
+    max-width: 100%; 
+    
+    /* 2. Mantém a proporção da imagem sem achatar */
+    height: auto; 
+    
+    /* 3. Garante que ela se comporte como um bloco e não deixe espaços embaixo */
+    display: block; 
+}
+
+/* Feedback visual solicitado */
+img:hover {
+    filter: brightness(0.8);
+}
+
+h3 {
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+/* --- TAREFA 3: Breakpoints --- */
+
+/* Tablet: 2 Colunas */
+@media (min-width: 768px) {
+    .galeria {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .galeria > article {
+        /* calc(50% - metade do gap) */
+        flex-basis: calc(50% - 5px); 
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+}
+
+/* Desktop: 3 Colunas */
+@media (min-width: 1024px) {
+    .galeria > article {
+        /* calc(33.33% - desconto para os gaps) */
+        flex-basis: calc(33.33% - 7px);
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+}
+
+</style>
+
+<body>
+    <header>Meu portifólio</header>
+
+    <main class="galeria">
+        <article class="item"><img src="https://plus.unsplash.com/premium_photo-1777272106330-752f6400a35a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8" alt=""><h3>Foto A</h3></article>
+        <article class="item"><img src="https://images.unsplash.com/photo-1769736540771-3fdda750175b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8" alt=""><h3>Foto B</h3></article>
+        <article class="item"><img src="https://images.unsplash.com/photo-1768777156507-8304c612d621?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt=""><h3>Foto C</h3></article>
+        <article class="item"><img src="https://plus.unsplash.com/premium_photo-1777019494979-606fca826126?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D" alt=""><h3>Foto D</h3></article>
+        <article class="item"><img src="https://images.unsplash.com/photo-1776977496468-2823fb2daa01?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MHx8fGVufDB8fHx8fA%3D%3D" alt=""><h3>Foto E</h3></article>
+        <article class="item"><img src="https://plus.unsplash.com/premium_photo-1721807801509-06b7d5f8db7a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D" alt=""><h3>Foto F</h3></article>
+    </main>
+
+</body>
+
+</html>

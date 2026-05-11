@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab3 - Módulo 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab A11y & Responsividade - UTFPR</title>
+
 </head>
+  <style>
+        /* MOBILE-FIRST */
+
+        *{
+            box-sizing: border-box;
+        }
+
+
+        body{
+                height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+      body { font-family: sans-serif; margin: 0; color: #333; }
+
+      .topo { 
+          background: #1a237e; color: #fff; 
+          display: flex; justify-content: space-between; padding: 15px;
+          align-items: center;
+      }
+
+      /* TAREFA 3: Menu Hamburguer visível apenas no mobile */
+      .links-desktop { display: none; }
+
+      .hero {height:100%; align-content: center; position: relative; text-align: center; background: #fff; }
+      .hero img { 
+        width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+        
+    }
+
+      /* TAREFA 1: ERRO DE CONTRASTE CRÍTICO */
+      .titulo { 
+          position: absolute; 
+          width: 100%; 
+          height: 100%;
+          top:0;
+          align-content: center;
+          backdrop-filter: brightness(0.5);
+          filter: drop-shadow(2px 2px 2px black);
+          color: #cecece; /* Quase invisível sobre o fundo claro da biblioteca */
+          font-size: 1.5rem; 
+          margin: 0;
+      }
+
+      .card { padding: 50px; text-align: center; }
+
+      /* TAREFA 3: BOTÃO QUE NÃO É BOTÃO */
+      .botao-falso { 
+          background: #007bff; color: white; 
+          padding: 10px 20px; display: inline-block; cursor: pointer; 
+          border-radius: 4px;
+      }
+
+      .rodape { padding: 20px; background: #f4f4f4; text-align: center; font-size: 0.8rem; }
+
+      /* TAREFA 2 e 3: MEDIA QUERY PARA DESKTOP */
+      @media (min-width: 768px) {
+          .menu-icon { display: none; }
+          .links-desktop { display: flex; gap: 20px; }
+          .links-desktop a { color: white; text-decoration: none; }
+          .titulo { font-size: 3.5rem; color: #cecece; }
+      }
+</style>
 <body>
-  <h1>Laboratório 3 - Módulo 3</h1>
+
+    <div class="topo">
+        <div>Logo UTFPR</div>
+        
+        <div class="menu-icon">
+            <img src="https://img.icons8.com/m_outlined/512/FFFFFF/menu.png" width="30">
+        </div>
+
+        <div class="links-desktop">
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&h=400&fit=crop">
+
+        <h1 class="titulo">Educação para Todos</h1>
+    </div>
+
+    <div class="card">
+        <p>Acesse o portal abaixo:</p>
+        <div class="botao-falso" onclick="alert('Login realizado')">Entrar</div>
+    </div>
+
+    <div class="rodape">© 2026 UTFPR Guarapuava</div>
+
 </body>
 </html>

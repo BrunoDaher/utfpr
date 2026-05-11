@@ -4,8 +4,123 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab2 - Módulo 3</title>
+  <style>
+
+
+    :root{
+
+      --colorA: rgb(42 46 144);
+      --colorALight:#b8b4f7;
+      --backLight:rgba(240, 237, 255, 0.482);
+      --colorB:var(--colorA)
+    
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      grid-template-columns: 30vw 1fr;
+      grid-template-rows: 100vh 1fr max-content;
+
+
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+      gap: 2vh;
+      padding: 4vh;
+      
+      background-color: var(--backLight);
+      color:var(--colorALight);
+    }
+
+    aside {
+      
+      color:var(--colorALight);
+      padding: 3vw;
+    }
+
+    aside legend {
+     color: var(--colorA);
+      margin-top: 0;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside ul li {
+      margin-bottom: 2vh;
+    }
+
+    aside ul li a {
+      color: var(--colorALight);
+      text-decoration: none;
+    }
+
+    aside ul li a:hover {
+      color: #ffffff;
+    }
+
+    .card {
+      background-color: var(--colorA);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .card.destaque {
+      grid-column: span 2;
+      background-color: var(--colorA)
+    }
+
+    .card h3 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Laboratório 2 - Módulo 3</h1>
+  <aside>
+    <legend><a style="color: black;">Dev</a><a>Course</a></legend>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#">Serviços</a></li>
+    </ul>
+  </aside>
+  <main>
+    <div class="card destaque">
+      <h3>Destaque</h3>
+      <p>Este é o card de destaque que ocupa duas colunas.</p>
+    </div>
+    <div class="card">
+      <h3>Módulo 1</h3>
+      <p>Descrição do módulo 1.</p>
+    </div>
+    <div class="card">
+      <h3>Módulo 2</h3>
+      <p>Descrição do módulo 2.</p>
+    </div>
+    <div class="card">
+      <h3>Módulo 3</h3>
+      <p>Descrição do módulo 3.</p>
+    </div>
+    <div class="card">
+      <h3>Módulo 4</h3>
+      <p>Descrição do módulo 4.</p>
+    </div>
+  </main>
 </body>
 </html>
