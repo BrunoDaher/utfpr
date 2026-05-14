@@ -1,0 +1,86 @@
+/* ARQUIVO REFATORADO - LABORATÓRIO 02 */
+/* ============================================
+   SISTEMA DE CORES COM VARIÁVEIS CSS
+   ============================================ */
+:root {
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2ecc71;
+    --cor-texto: #333333;
+    --cor-branca: #ffffff;
+    --cor-borda: #dddddd;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header {
+    background-color: var(--cor-primaria);
+    padding: 20px 10px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--cor-branca);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+/* ============================================
+   BOTÕES - CLASSE BASE + VARIAÇÕES
+   ============================================ */
+.botao {
+    color: var(--cor-branca);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao-primario {
+    background-color: var(--cor-primaria);
+}
+
+.botao-secundario {
+    background-color: var(--cor-secundaria);
+}
+
+/* ============================================
+   CARD
+   ============================================ */
+.card {
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    margin: 10px;
+    padding: 15px;
+}
+
+.card-titulo {
+    color: var(--cor-texto);
+    font-weight: bold;
+}
+
+.card-texto {
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* ============================================
+   RESPONSIVIDADE - MOBILE
+   ============================================ */
+@media (max-width: 480px) {
+    .container-flex {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
