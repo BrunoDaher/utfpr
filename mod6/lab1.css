@@ -52,6 +52,7 @@ header h1 {
     border: 1px solid var(--cor-borda);
     margin: 10px;
     padding: 15px;
+    flex: 10px 2;
 }
 
 .card-titulo {
@@ -73,6 +74,18 @@ footer {
     padding: 20px;
     margin-top: 50px;
 }
+
+/* flex */   
+
+   .flexRow{
+    display: flex;
+    flex-direction: row;
+
+    &.wrap{
+        flex-wrap: wrap;
+    }
+   }
+    
 
 /* ============================================
    RESPONSIVIDADE - MOBILE
