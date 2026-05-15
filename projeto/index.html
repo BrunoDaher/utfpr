@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blueprint | Engenharia de Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <input type="checkbox" id="toggle-tema">
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <span class="bracket">&lt;</span> Blueprint <span class="bracket">/&gt;</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#mainArticle">Assuntos</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <label for="toggle-tema" class="switch-btn">
+                    Tema
+                </label>
+            </div>
+        </nav>
+
+         
+    </header>
+
+ 
+
+    <main class="app-container">
+
+      
+        
+        <section class="hero-section">
+            
+            <div class="hero-text">
+                <span class="badge">V1.0.0 Stable</span>
+                <h1>A arte de transformar <br><span class="gradient-text">código em experiência.</span></h1>
+                <p>Este projeto é um estudo metalinguístico sobre a construção de interfaces modernas, utilizando apenas CSS nativo e HTML semântico.</p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary">Documentação</button>
+                    <button class="btn btn-secondary">Explorar Grid</button>
+                </div>
+            </div>
+
+            <div id="carousel" class="flex flex-row card">
+              <div  class="hero-visual">
+                  <div class="ai-card">
+                      <div class="card-header">
+                          <code>component.refactor()</code>
+                          <div class="status-dot"></div>
+                      </div>
+                      <div class="card-body">
+                          <h3>Performance Score</h3>
+                          <div class="progress-bar"><div class="fill"></div></div>
+                          <p>Refatorado com IA para otimização de renderização crítica e redução de reflow.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div  class="hero-visual">
+                  <div class="ai-card">
+                      <div class="card-header">
+                          <code>component.refactor()</code>
+                          <div class="status-dot"></div>
+                      </div>
+                      <div class="card-body">
+                          <h3>Performance Score</h3>
+                          <div class="progress-bar"><div class="fill"></div></div>
+                          <p>Refatorado com IA para otimização de renderização crítica e redução de reflow.</p>
+                      </div>
+                  </div>
+              </div>
+
+            </details>
+
+        </section>
+
+        <article id="mainArticle" class="main-article flex flex-row wrap gap-lg">
+          
+          <section  class="content-section">
+              <div class="section-tag">01. Estrutura</div>
+              <h2>O esqueleto semântico</h2>
+              <p>Utilizando as tags corretas para que o navegador entenda a hierarquia dos dados de forma nativa.</p>
+
+              <section class="flex flex-column vscode-hud gap-lg">    
+                   <code>
+                      <dl>
+                        <!-- BODY (Nível 0) -->
+                        <dt><span class="sinal">&lt;</span><span class="tag">body</span><span class="sinal">&gt;</span></dt>
+                        <dd>
+                          
+                          <!-- HEADER (Nível 1) -->
+                          <dl>
+                            <dt><span class="sinal">&lt;</span><span class="tag">header</span><span class="sinal">&gt;</span></dt>
+                            <dd><span class="texto">Topo da Página</span></dd>
+                            <dt><span class="sinal">&lt;/</span><span class="tag">header</span><span class="sinal">&gt;</span></dt>
+                          </dl>
+
+                          <!-- ASIDE (Nível 1) -->
+                          <dl>
+                            <dt><span class="sinal">&lt;</span><span class="tag">aside</span><span class="sinal">&gt;</span></dt>
+                            <dd><span class="texto">Menu Lateral / Filtros</span></dd>
+                            <dt><span class="sinal">&lt;/</span><span class="tag">aside</span><span class="sinal">&gt;</span></dt>
+                          </dl>
+
+                          <!-- MAIN (Nível 1) -->
+                          <dl>
+                            <dt><span class="sinal">&lt;</span><span class="tag">main</span><span class="sinal">&gt;</span></dt>
+                            <dd>
+                              <!-- Conteúdo interno do Main (Nível 2 Automático) -->
+                              <span class="texto">Conteúdo Principal do Jogo ou App</span>
+                            </dd>
+                            <dt><span class="sinal">&lt;/</span><span class="tag">main</span><span class="sinal">&gt;</span></dt>
+                          </dl>
+
+                          <!-- FOOTER (Nível 1) -->
+                          <dl>
+                            <dt><span class="sinal">&lt;</span><span class="tag">footer</span><span class="sinal">&gt;</span></dt>
+                            <dd><span class="texto">Rodapé e Direitos Autorais</span></dd>
+                            <dt><span class="sinal">&lt;/</span><span class="tag">footer</span><span class="sinal">&gt;</span></dt>
+                          </dl>
+
+                        </dd>
+                        <dt><span class="sinal">&lt;/</span><span class="tag">body</span><span class="sinal">&gt;</span></dt>
+                      </dl>
+                    </code> 
+              </section>
+
+          </section>
+
+          <section id="modulo-03" class="content-section">
+              <div class="section-tag">01. Tags</div>
+              <h2>Layout e prototipação</h2>
+              <p>Ferramentas de prototipação e layout como figma e google stitch trazem resultados rápidos e facilitam a criação de layouts.</p>
+
+              <section style="justify-content: space-between; height: 100%;" class="flex flex-column vscode-hud gap-lg">    
+
+                <fieldset class="code-header" >
+                  <div class="flex flex-row gap2" style="justify-content: space-between;">
+                    
+                    <span class="">Menu</span>
+                    <span class="">Login</span>
+                    <span class="">Sair</span>
+                    
+                  </div>
+                  <legend class="down">header</legend>
+                </fieldset> 
+
+                <div id="lay" class="flex flex-row gap-sm">
+              
+                  <fieldset class="code-aside" style="flex: 1;">
+                    <legend class="down">aside</legend>
+
+                    <ul style="font-size: 0.5em">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Sobre</a></li>
+                      <li><a href="#">Contato</a></li>
+                      <li><a href="#">Serviços</a></li>
+                    </ul>
+
+                  </fieldset>
+                  
+                    <fieldset>
+                      <legend class="down">Main</legend>
+                      <div class="card-grid">
+                        <a class="bi-phone" target="_blank" href="https://www.figma.com"> Figma</a>
+                        <a class="bi-google" target="_blank" href="https://stitch.withgoogle.com/"> Google Stitch</a>
+                      </div>
+                    </fieldset>
+
+                </div>
+
+                <fieldset class="flex flex-row" style="justify-content: center; padding: 1vh;">
+                  <legend class="down">footer</legend>
+                  <p>Rodapé da página</p>
+                </fieldset>
+                
+
+              </section>
+
+          </section>
+
+           <section id="modulo-05" class="content-section">
+              <div class="section-tag">01. UX/UI</div>
+              <h2>Zero JS</h2>
+              <p>Utilizando  o máximo de html e css para uma landing page, aproveitando os recursos nativos</p>
+
+              <section class="flex flex-column gap-lg">    
+                toDo
+                <br>
+                Implementar um carrossel de imagens utilizando apenas CSS
+                Tag Details (accordion)
+                Triggers (via css)
+                Animações com keyframes
+              </section>
+
+          </section>
+
+           <section id="modulo-06" class="content-section">
+              <div class="section-tag">Responsividade</div>
+              <h2>Responsividade</h2>
+              <p>Utilizando o máximo de css com o objetivo de criar interfaces que respondam a diferentes dispositivos e resoluções.</p>
+
+              <section class="flex flex-column gap-lg">    
+
+           
+                
+
+              </section>
+
+          </section>
+
+        </article>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>
+          <a>&copy; 2026 - <a href="https://github.com/brunocoelho" target="_blank">Bruno Coelho</a>.</p>
+    </footer>
+
+</body>
+</html>

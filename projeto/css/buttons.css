@@ -1,0 +1,79 @@
+/* MÓDULO 05 - BOTÕES E INTERAÇÕES */
+
+/* Base Components - Reuso e Herança */
+
+
+button{
+    padding: 3px
+}
+
+ #toggle-tema { 
+    
+    display: none;
+
+}
+
+
+
+   /* O Botão/Label Visual da Chave */
+.switch-btn {
+    
+    color: var(--text-main);
+    padding: 7px;
+    font-size: 0.8em;
+    cursor: pointer;    
+    user-select: none;
+    
+    &:before {
+        content: "🌙"; 
+        font-size: 1.2em;
+        }
+    
+    transition: background-color 0.3s;
+}
+
+.btn {
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--accent-glow);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--glass-border);
+}
+
+.btn-secondary:hover {
+    background: var(--glass-border);
+}
+
+/* Buttons & Interactions - Módulo 05 */
+.hero-actions,
+.btn-group {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.hero-actions {
+    margin-top: var(--space-xl);
+}
+
+/* PESQUISA: ACESSIBILIDADE (:focus-visible) */
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}

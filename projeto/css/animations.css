@@ -1,0 +1,52 @@
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+  @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+
+
+ @keyframes pulsaLuzDireita {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.15; }
+  100% { transform: translate(-100px, 50px) scale(1.3); opacity: 0.3; }
+}
+
+@keyframes pulsaLuzEsquerda {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.15; }
+  100% { transform: translate(80px, -50px) scale(1.2); opacity: 0.25; }
+}
+
+
+
+body:has(#toggle-tema:checked) {
+  --bg-dark: #f8fafc; 
+  --bg-card: rgba(255, 255, 255, 0.7); 
+  --bg-backdrop: rgba(241, 245, 249, 0.85); 
+  --accent: #0284c7; 
+  --accent-alt: #9333ea; 
+  --accent-glow: rgba(2, 132, 199, 0.2); 
+  --text-main: #0f172a; 
+  --text-dim: #64748b; 
+
+
+  /* Ajustado: Sombras em ambientes claros precisam ser mais suaves e espalhadas */
+  --shadow-strong: rgba(15, 23, 42, 0.06); 
+
+  .switch-btn::before {
+        content: "☀️"; 
+    }
+
+    animation: tema 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  
+}

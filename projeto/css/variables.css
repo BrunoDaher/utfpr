@@ -1,0 +1,48 @@
+/* MÓDULO 02 - DESIGN SYSTEM E VARIÁVEIS CSS */
+:root {
+    /* Color Palette */
+    --bg-dark: #020617;
+    --bg-card: rgba(15, 23, 42, 0.6);
+    --bg-backdrop: rgba(2, 6, 23, 0.8);
+    --accent: #38bdf8;
+    --accent-alt: #44a8dd   ;
+    --accent-glow: rgba(56, 189, 248, 0.4);
+    --text-main: #f1f5f9;
+    --text-dim: #94a3b8;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-strong: rgba(0, 0, 0, 0.3);
+
+    /* Typography */
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --header-height: 80px;
+    --page-gutter: 2rem;
+    --section-gap: 4rem;
+    --hero-padding: 2rem;
+    --space-sm: 0.8rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --btn-padding: 0.8rem 2rem;
+    --btn-radius: 12px;
+    --badge-padding: 0.4rem 1rem;
+    --badge-radius: 50px;
+    --card-radius: 24px;
+    --card-padding: 2rem;
+
+    /* Transitions */
+    --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* PESQUISA: DARK MODE NATIVO */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-dark: #f8fafc;
+        --bg-card: rgba(255, 255, 255, 0.8);
+        --text-main: #0f172a;
+        --text-dim: #475569;
+        --glass-border: rgba(0, 0, 0, 0.1);
+    }
+}
