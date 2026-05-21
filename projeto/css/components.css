@@ -114,8 +114,9 @@ body{
 
 /* HERO SECTION - CSS GRID */
 .hero-section {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     
     min-height: 50vh;
     align-items: center;
@@ -296,15 +297,15 @@ a:focus-visible {
     }
 
 
+    
 
     .main-article{
         animation: fadeInUp 0.8s ease-out forwards;
     }
 
     #iaDiv{
-         margin-left:60%;
-      align-content: end;
-        animation: change 1s ease-in-out forwards;
+         justify-content: space-around;
+        /*animation: change 1s ease-in-out forwards;*/
         
     }
     
@@ -388,7 +389,7 @@ margin-block: 2em;
     text-align: center;
         align-content: center;
     height: 7em;
-    font-size: .8em;
+        font-size: calc(0.5vw + 1.5vh);
     text-align: center;
 
     
@@ -402,6 +403,7 @@ margin-block: 2em;
 }
 
 .content-section h2{
+        font-size: calc(1.5vw + 1.5vh);
     text-align: center;
 }
 
