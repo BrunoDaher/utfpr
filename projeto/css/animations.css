@@ -3,19 +3,94 @@
     50% { transform: translateY(-15px); }
 }
 
-  @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
     }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes flip {
+  0% {
+    transform: perspective(600px) rotateY(0deg);
+    
+  }
+    50% {
+    transform: perspective(600px) rotateY(180deg);
+    
+    }  
+  100% {
+    transform: perspective(600px) rotateY(360deg);
+
+  }
+}
+
+@keyframes destaque {
+  0%{
+    color:white;
+    transform: scale(1);
+     
+  }
+  50%{ 
+    color:var(--accent);
+    transform: scale(1.2)
+  }
+  100%{ 
+    color:white;
+    transform: scale(1)
+  }
+}
 
 
+@keyframes fadeLoop {
+    0% { opacity: 0; }
+    5% { opacity: 1; }   /* Fade in suave */
+    33% { opacity: 1; }  /* Fica totalmente visível */
+    38% { opacity: 0; }  /* Fade out enquanto o próximo entra */
+    100% { opacity: 0; } /* Espera o ciclo terminar */
+}
 
+@keyframes slide {
+  0% 
+  { 
+    
+    transform: translateX(100vw);
+    
+  }
+  
+  100% 
+  { 
+    
+    transform: translateX(-100vw);
+    
+
+  }
+
+ 
+
+}
+
+@keyframes nav {
+  0% {
+        transform: translate(30vh, 15vh) scale(1.5);
+  }
+
+  25% {
+    transform: translate(30vh, -15vh) scale(1.5);
+  }
+
+  75% {
+    transform: translate(-30vh, -15vh) scale(1.5);
+  }
+
+  100% {
+    transform: translate(-30vh, 15vh) scale(1.5);
+  }
+}
 
  @keyframes pulsaLuzDireita {
   0% { transform: translate(0, 0) scale(1); opacity: 0.15; }
@@ -27,26 +102,16 @@
   100% { transform: translate(80px, -50px) scale(1.2); opacity: 0.25; }
 }
 
-
-
-body:has(#toggle-tema:checked) {
-  --bg-dark: #f8fafc; 
-  --bg-card: rgba(255, 255, 255, 0.7); 
-  --bg-backdrop: rgba(241, 245, 249, 0.85); 
-  --accent: #0284c7; 
-  --accent-alt: #9333ea; 
-  --accent-glow: rgba(2, 132, 199, 0.2); 
-  --text-main: #0f172a; 
-  --text-dim: #64748b; 
-
-
-  /* Ajustado: Sombras em ambientes claros precisam ser mais suaves e espalhadas */
-  --shadow-strong: rgba(15, 23, 42, 0.06); 
-
-  .switch-btn::before {
-        content: "☀️"; 
-    }
-
-    animation: tema 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  
+html {
+  scroll-behavior: smooth;
 }
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+

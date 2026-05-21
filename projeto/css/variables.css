@@ -1,13 +1,14 @@
 /* MÓDULO 02 - DESIGN SYSTEM E VARIÁVEIS CSS */
 :root {
     /* Color Palette */
-    --bg-dark: #020617;
+     --bg-dark: #020617;
     --bg-card: rgba(15, 23, 42, 0.6);
     --bg-backdrop: rgba(2, 6, 23, 0.8);
-    --accent: #38bdf8;
-    --accent-alt: #44a8dd   ;
+    --accent: #641451ed;
+    --accent-alt: #ffffff;
     --accent-glow: rgba(56, 189, 248, 0.4);
     --text-main: #f1f5f9;
+    --text-bright: #ffffff;
     --text-dim: #94a3b8;
     --glass-border: rgba(255, 255, 255, 0.1);
     --shadow-strong: rgba(0, 0, 0, 0.3);
@@ -19,6 +20,7 @@
     /* Spacing & Layout */
     --container-width: 1200px;
     --header-height: 80px;
+    --footer-height:60px;
     --page-gutter: 2rem;
     --section-gap: 4rem;
     --hero-padding: 2rem;
@@ -31,17 +33,45 @@
     --badge-radius: 50px;
     --card-radius: 24px;
     --card-padding: 2rem;
+    --dropA: drop-shadow(2px 4px 6px var(--bg-backdrop));
 
     /* Transitions */
     --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* PESQUISA: DARK MODE NATIVO */
+body:has(#toggle-tema:checked) {
+  --bg-dark: #f8fafc; 
+  --bg-card: rgba(255, 255, 255, 0.7); 
+  --bg-backdrop: rgba(241, 245, 249, 0.85); 
+  --accent: #b0b0b0; 
+  --accent-alt: #9333ea; 
+  --accent-glow: rgba(2, 132, 199, 0.2); 
+  --text-main: #0f172a; 
+  --text-dim: #64748b; 
+
+
+  /* Ajustado: Sombras em ambientes claros mais suaves e espalhadas */
+  --shadow-strong: rgba(15, 23, 42, 0.06); 
+
+  .switch-btn::before {
+        content: "☀️"; 
+    }
+
+    animation: tema 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  
+}
+
+body:has(#toggle-tema:checked) .imgTema,
+#toggle-tema:checked ~ .app-container .imgTema {
+
+}
+
+/* DARK MODE NATIVO */
 @media (prefers-color-scheme: light) {
     :root {
         --bg-dark: #f8fafc;
         --bg-card: rgba(255, 255, 255, 0.8);
-        --text-main: #0f172a;
+        --text-main: white;
         --text-dim: #475569;
         --glass-border: rgba(0, 0, 0, 0.1);
     }

@@ -1,53 +1,48 @@
-1 - Estrutura Semântica Rigorosa: Construir o layout completo utilizando apenas tags semânticas (Módulo 01), garantindo que a estrutura seja compreensível para motores de busca e leitores de tela.
+## Resumo por tópico implementado no projeto
 
-        ✅ style.css agora tem um sistema de design centralizado com variáveis CSS.
+1. **Estrutura Semântica Rigorosa**
+   - O HTML usa `header`, `main`, `article`, `section`, `aside` e `footer`.
+   - A hierarquia de conteúdo está clara e facilita leitura por navegadores e leitores de tela.
 
-        O que foi implementado
-        :root define:
-        cores do tema (--color-primary, --color-secondary, --color-surface, --color-text, etc.)
-        tipografia global (--font-family-base, --font-family-heading, --font-size-base, etc.)
-        espaçamentos e bordas (--space-*, --radius)
-        elevação visual (--shadow)
-        estilos globais usam essas variáveis para:
-        body
-        a
-        button / .button
-        .header
-        .section
-        .card
-        footer
-        Benefício
-        Agora é possível trocar a identidade visual de forma global e organizada apenas alterando as variáveis em :root.
+2. **Sistema de Design com Variáveis**
+   - `projeto/css/components.css` define `:root` com cores, tipografia, espaçamento e bordas.
+   - O `projeto/css/style.css` importa o layout, componentes, botões, flexbox e animações.
+   - O sistema permite alterar estilo global apenas mudando variáveis.
 
+3. **Layout Híbrido (Flex & Grid)**
+   - Navegação e botões usam utilitários `flex` (`.nav-container`, `.hero-actions`, `.flex-row`, `.flex-column`).
+   - A seção hero usa CSS Grid com `grid-template-columns: 1.2fr 0.8fr`.
+   - Cards e seções se adaptam com `repeat(auto-fit, minmax(240px, 1fr))` e flex wrap.
 
-2 - Sistema de Design com Variáveis: Implementar um esquema de cores e tipografia centralizado em variáveis CSS, permitindo a troca de identidade visual do seu tema de forma global e organizada (Módulo 02).
+4. **Interface Responsiva**
+   - Media queries implementadas para `968px`, `768px`, `640px` e `480px`.
+   - No mobile, o menu some, o hero vira coluna, e texto/fonte escalam com `clamp()`.
+   - O layout mantém integridade visual em diferentes larguras.
 
-    Inclui:
+5. **Microinterações de Feedback**
+   - Animações em `projeto/css/animations.css` incluem `fadeInUp`, `float`, `destaque` e `slide`.
+   - `.ai-card` e `.main-article` recebem animações de entrada; `.gallery > img` tem movimento contínuo.
+   - Há transições suaves e foco visual para elementos interativos.
 
-        header
-        nav
-        main
-        article
-        section
-        aside
-        footer
+6. **Curadoria de Código com IA**
+   - A seção `#ia` demonstra o uso de IA no processo, com referências visuais a `component.refactor()` e `Github Copilot`.
+   - O componente foi ajustado no CSS e HTML com atenção às opções de refatoração e usabilidade.
 
+7. **Dark Mode Nativo**
+   - Implementado `@media (prefers-color-scheme: light)` em `projeto/css/components.css`.
+   - Existe também toggle manual via `#toggle-tema` e `body:has(#toggle-tema:checked)`.
 
-Layout Híbrido (Flex & Grid): Criar seções que combinem o alinhamento do Flexbox (menus/botões) com a robustez do CSS Grid para o posicionamento da grade principal de conteúdo (Módulo 03).
+8. **Sticky Headers e Scroll Snap**
+   - O cabeçalho usa `position: sticky; top: 0;` para permanecer visível.
+   - `scroll-behavior: smooth` e `overscroll-behavior: none` estão definidos para navegação fluida.
+   - A base para `scroll-snap` está presente, mesmo que comentada atualmente.
 
-        Solicitei ao promp para não apenas alterar o layout html e css, mas criar um css desacoplado, de maneira a montar ele como se fosse um lego, incluindo as classes quando necessário. Desacoplando o código e permitindo reaproveitamento, de padrão, ele começou alterar a estrutura, o que não é a proposta.
-                        
+9. **Otimização de Performance e Assets**
+   - O CSS está modularizado para reduzir acoplamento e facilitar manutenção.
+   - Há uso de variáveis e importação organizada de módulos.
+   - Ainda não há WebP local ou lazy loading explícito em imagens, mas a estrutura suporta melhoria.
 
-Interface Responsiva: Garantir que o projeto seja adequado para telas pequenas (mobile) e escale com fluidez até resoluções desktop, sem quebras visuais (Módulo 04).
-
-Microinterações de Feedback: Desenvolver animações de entrada e estados de hover que deem vida à interface e melhorem a experiência do usuário (Módulo 05).
-
-Curadoria de Código com IA: Utilizar IA para gerar e refatorar um componente específico da sua página, documentando como você validou e ajustou o código gerado para o seu projeto (Módulo 06).
-
-Implementação de Dark Mode Nativo (Pesquisa): Pesquisar e aplicar a media query prefers-color-scheme para que o seu site se adapte automaticamente às preferências de tema do sistema do usuário.
-
-Sticky Headers e Scroll Snap (Pesquisa): Pesquisar propriedades de scroll do CSS para criar um cabeçalho fixo e seções que se ajustam suavemente à tela durante a navegação.
-
-Otimização de Performance e Assets (Pesquisa): Pesquisar sobre formatos de imagem modernos (como WebP) e carregamento de fontes para garantir que sua landing page abra instantaneamente. Tente atingir uma pontuação de performance próxima de 100 no Google PageSpeed.
-
-Acessibilidade Avançada com Teclado (Pesquisa): Pesquisar e implementar o gerenciamento de foco visual (:focus-visible) e atributos ARIA básicos para garantir que qualquer pessoa consiga navegar no seu projeto sem usar o mouse.
+10. **Acessibilidade Avançada com Teclado**
+   - `a:focus-visible` provê indicação clara de foco.
+   - O HTML semântico suporta navegação por teclado.
+   - Falta um pouco de ARIA explicita, mas a base semântica e o foco já melhoram acessibilidade.

@@ -1,0 +1,44 @@
+
+/* Utilitários para Reuso */
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+
+.justBetween {
+    justify-content: space-between;
+}
+
+.justCenter {
+    justify-content: center;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.flex-row.wrap > article{
+    flex: 1 1 auto;
+
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+.gap-sm{
+    gap: var(--space-sm);
+}
+
+.mb-lg {
+    margin-bottom: var(--space-lg);
+}
+

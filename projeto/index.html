@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>The Blueprint | Engenharia de Interface</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+       
 </head>
 <body>
 
@@ -34,8 +36,6 @@
  
 
     <main class="app-container">
-
-      
         
         <section class="hero-section">
             
@@ -45,13 +45,19 @@
                 <p>Este projeto é um estudo metalinguístico sobre a construção de interfaces modernas, utilizando apenas CSS nativo e HTML semântico.</p>
                 
                 <div class="hero-actions">
-                    <button class="btn btn-primary">Documentação</button>
-                    <button class="btn btn-secondary">Explorar Grid</button>
+                    <button class="btn btn-primary">
+                      <a href="https://css-tricks.com/" target="_blank">Documentação</a></button>
+                    <button class="btn btn-secondary">
+                      <a href="#modulo-03">Layout</a>
+                    </button>
+                    <button class="btn btn-secondary">
+                      <a href="#ia">I.A</a>
+                    </button>
                 </div>
             </div>
 
-            <div id="carousel" class="flex flex-row card">
-              <div  class="hero-visual">
+            <div id="carousel" class="flex flex-row wrap card">
+              <div class="hero-visual">
                   <div class="ai-card">
                       <div class="card-header">
                           <code>component.refactor()</code>
@@ -65,28 +71,14 @@
                   </div>
               </div>
 
-              <div  class="hero-visual">
-                  <div class="ai-card">
-                      <div class="card-header">
-                          <code>component.refactor()</code>
-                          <div class="status-dot"></div>
-                      </div>
-                      <div class="card-body">
-                          <h3>Performance Score</h3>
-                          <div class="progress-bar"><div class="fill"></div></div>
-                          <p>Refatorado com IA para otimização de renderização crítica e redução de reflow.</p>
-                      </div>
-                  </div>
-              </div>
-
-            </details>
+            </div>
 
         </section>
 
-        <article id="mainArticle" class="main-article flex flex-row wrap gap-lg">
+        <section id="mainArticle" class="justBetween main-article flex flex-row wrap gap-lg" >
           
-          <section  class="content-section">
-              <div class="section-tag">01. Estrutura</div>
+          <article  class="content-section">
+              
               <h2>O esqueleto semântico</h2>
               <p>Utilizando as tags corretas para que o navegador entenda a hierarquia dos dados de forma nativa.</p>
 
@@ -134,10 +126,61 @@
                     </code> 
               </section>
 
-          </section>
+          </article>
 
-          <section id="modulo-03" class="content-section">
-              <div class="section-tag">01. Tags</div>
+             <article id="modulo-06" class="content-section " >
+              
+              <h2>Responsividade</h2>
+              <p>
+                Garantir que a tela se adapte as diferentes dimensões e resoluções dos dispositivos.
+              </p>
+
+              <section class="card" >
+                
+                <div class="icons flex flex-row gap-sm justCenter" style="align-items: baseline;">
+
+                  <div style="align-items: baseline;">
+                      <i  style="font-size: 3em;"  class="bi bi-tablet"></i> 
+                  </div>
+  
+                  <div class="">
+                      <i style="font-size: 8em;" class="bi bi-display"></i>
+                  </div>
+                  
+                  <div class="">
+                      <i style="font-size: 5em;" class="bi bi-phone"></i>
+                  </div>
+                 
+               </div>
+
+              </section>
+
+          </article>
+
+           <article id="modulo-05" class="content-section">
+
+              <h2>Animations</h2>
+              <p>Utilizando  o máximo de html e css para uma landing page, aproveitando os recursos nativos</p>
+
+              <article class="backgrad flex flex-column justCenter gap-lg">    
+                
+              <div class="gallery flex flex-row justCenter  ">
+                <img src="https://media.istockphoto.com/id/1388339818/pt/foto/a-classic-red-telephone-booth-in-front-of-the-big-ben-clocktower-in-london.jpg?b=1&s=612x612&w=0&k=20&c=AUc6mjhAbWhc03HmiWqkXakAwR8w0vyRTIGSFxzzIKQ=" alt="london">
+                <img src="https://images.pexels.com/photos/4784349/pexels-photo-4784349.jpeg" alt="praia">
+                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="paisagem">
+                <img src="https://cdn.pixabay.com/photo/2016/11/22/23/53/starfish-1851289_1280.jpg" alt="estreladomar">
+
+               
+              </div>
+
+              </article>
+
+          </article>
+
+         
+
+          <article id="modulo-03" class="content-section">
+              
               <h2>Layout e prototipação</h2>
               <p>Ferramentas de prototipação e layout como figma e google stitch trazem resultados rápidos e facilitam a criação de layouts.</p>
 
@@ -159,7 +202,7 @@
                   <fieldset class="code-aside" style="flex: 1;">
                     <legend class="down">aside</legend>
 
-                    <ul style="font-size: 0.5em">
+                    <ul style="font-size: 0.5em" class="flex flex-column justBetween gap-sm">
                       <li><a href="#">Home</a></li>
                       <li><a href="#">Sobre</a></li>
                       <li><a href="#">Contato</a></li>
@@ -170,7 +213,7 @@
                   
                     <fieldset>
                       <legend class="down">Main</legend>
-                      <div class="card-grid">
+                      <div style="color:var(--text-main)" class="card-grid" style="color: var(--accent);">
                         <a class="bi-phone" target="_blank" href="https://www.figma.com"> Figma</a>
                         <a class="bi-google" target="_blank" href="https://stitch.withgoogle.com/"> Google Stitch</a>
                       </div>
@@ -180,51 +223,61 @@
 
                 <fieldset class="flex flex-row" style="justify-content: center; padding: 1vh;">
                   <legend class="down">footer</legend>
-                  <p>Rodapé da página</p>
+                  <a>Rodapé da página</a>
                 </fieldset>
                 
 
               </section>
 
-          </section>
+          </article>
 
-           <section id="modulo-05" class="content-section">
-              <div class="section-tag">01. UX/UI</div>
-              <h2>Zero JS</h2>
-              <p>Utilizando  o máximo de html e css para uma landing page, aproveitando os recursos nativos</p>
+          <article id="ia" class="content-section">
+              
+              <h2>Inteligencia Artificial no processo</h2>
+              <p>Inteligência artificial em processos de desenvolvimento de software</p>
 
-              <section class="flex flex-column gap-lg">    
-                toDo
-                <br>
-                Implementar um carrossel de imagens utilizando apenas CSS
-                Tag Details (accordion)
-                Triggers (via css)
-                Animações com keyframes
-              </section>
 
-          </section>
+              <section class=" flex flex-column gap-lg justBetween card">
 
-           <section id="modulo-06" class="content-section">
-              <div class="section-tag">Responsividade</div>
-              <h2>Responsividade</h2>
-              <p>Utilizando o máximo de css com o objetivo de criar interfaces que respondam a diferentes dispositivos e resoluções.</p>
+                <div class="card-header">
 
-              <section class="flex flex-column gap-lg">    
+                  Trabalho apresentado à disciplina de HTML e CSS , programa de pós-graduação em desenvolvimento Web com TS e Inteligência artificial - UTFPR Guarapuava
 
-           
+                </div>
+
+                <div class="mapaContainer card-body" >
+
+                    <img
+                    style="animation: nav 15s ease infinite;"
+                    class="imgTema" src="./img/fluxo.png">
+
+                </div>
+
+                <div
+                    class="card-footer flex flex-row  justCenter gap-lg justCenter">    
+
                 
+                <div class="bi-code"> Windsurf</div>
+                <div class="bi-google"> Gemini</div>
+                <div class="bi-code"> VsCode</div>
+                <div class="bi-github"> Github Copilot</div>
+              </div>
+            </section>
 
-              </section>
+              
 
-          </section>
+          </article>
 
-        </article>
+        
+         
+        </section>
 
     </main>
 
     <footer class="main-footer">
-        <p>
-          <a>&copy; 2026 - <a href="https://github.com/brunocoelho" target="_blank">Bruno Coelho</a>.</p>
+        <a>
+          &copy; 2026 - <a href="https://github.com/brunocoelho" target="_blank">Bruno Coelho</a>.
+    </a>
     </footer>
 
 </body>
