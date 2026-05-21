@@ -44,11 +44,14 @@ body:has(#toggle-tema:checked) {
   --bg-card: rgba(255, 255, 255, 0.7); 
   --bg-backdrop: rgba(241, 245, 249, 0.85); 
   --accent: #b0b0b0; 
-  --accent-alt: #9333ea; 
+  --accent-alt: #2d68cf; 
   --accent-glow: rgba(2, 132, 199, 0.2); 
   --text-main: #0f172a; 
-  --text-dim: #64748b; 
+  --text-dim: #2e60a7; 
+ 
+  background: rgb(222, 218, 218);
 
+  
 
   /* Ajustado: Sombras em ambientes claros mais suaves e espalhadas */
   --shadow-strong: rgba(15, 23, 42, 0.06); 

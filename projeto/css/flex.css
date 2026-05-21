@@ -34,10 +34,18 @@
 }
 
 .col-sm{
-    @media (max-width:768px) {
+    @media (mx-width:768px) {
         flex-direction: column !important;
     }
 }
+
+.col-port{
+
+    @media (orientation: portrait)and (max-width:1024px) {
+        flex-direction: column !important;
+    }
+}
+
 
 .col-md{
      @media (min-width:768px) {

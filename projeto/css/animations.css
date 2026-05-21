@@ -77,21 +77,19 @@
   { 
     filter: saturate(0);
     transform: translateX(-100vw);
-    
-
   }
-
- 
 
 }
 
 @keyframes change {
   0% {
-
+    margin-left:60%;
+      align-content: end;
     
   }
   100% {
-    
+    margin-left:0%;
+      align-content: start;
   }
   
 }

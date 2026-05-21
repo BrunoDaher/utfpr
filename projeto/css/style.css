@@ -18,7 +18,7 @@ a{
 .vscode-hud {
   
   background-color: var(--shadow-strong);
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: 'Fira Code', Consolas, monospace;
 
   color: var(--accent-alt);            /* Texto padrão */
