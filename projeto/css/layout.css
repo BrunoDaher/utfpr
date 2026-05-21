@@ -47,6 +47,10 @@ body , html{
     overflow-x: hidden;
 }
 
+
+
+
+
 fieldset{
     padding: 1vh;
     position: relative;
@@ -62,6 +66,7 @@ footer{
  position: fixed;
     place-items: end;
     background-blend-mode: color;
+    background: var(--bg-backdrop);
     width: 100%;
     padding: 1em;
     bottom: 0;

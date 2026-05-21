@@ -8,218 +8,244 @@
 
     @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
-    /* --- CSS Inicial: Foco em 320px (Mobile First) --- */
+          /* --- CSS Inicial: Foco em 320px (Mobile First) --- */
 
-    :root{
-      --altHeader:20px;
-    }
-
-    .flexBetween{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-content: center;
-      align-items: center;
-    }
-
-    html, body{
-      display: flex;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    body {
-      
-      
-
-      flex-direction: column;
-      
-      
-      
-      margin: 0;
-
-      background-image:url(https://img.wallpapic-br.com/i3513-925-049/medium/paisagem-de-outono-cerca-madeira-casa-imagem-de-fundo.jpg);
-      background-repeat: round;
-      background-size: inherit;
-      color: #333;
-
-      @media (orientation: portrait) {
-                background-position: -82vh -2vh;
+          /* ==========================================================================
+        1. VARIÁVEIS E RESET / RESETS GLOBAIS
+        ========================================================================== */
+      :root {
+        --altHeader: 70px; /* Corrigido de 20px para 70px para bater com a altura do header */
+        --altFooter: 50px;
+        --primary-color: #6b3012;
+        --secondary-color: #f2e8cf;
+        --main-bg-color:#150b0a;
+        --second-bg-color: #f2e8cf;
       }
-    }
 
-    header {
-      box-sizing: border-box;
-      padding: 1rem;
-      height:90px;
-      text-align: center;
-      font: white;
-      backdrop-filter: brightness(0.13) saturate(0.7) blur(4px);
-    }
 
-    main{
-      display: flex;
-      flex-direction: column;
-        height: calc(100vh - var(--altHeader));
-
-        overflow-y: scroll;
-
-    }
-
-    .logo {
-      font-weight: bold;
-      display: flex;
-      gap: 1vh;
-      font-size: 1.5rem;
-      padding: 3vh;
-    }
-
-    .benefits
-    {
-      justify-content: center;
-      backdrop-filter: brightness(0.13) blur(4px);
-          
-    }
-
-    .hero {
-      display: flex;
-      text-align: center;
-          backdrop-filter: brightness(0.5) blur(6px) contrast(0.5);
-          flex-direction: column;
-
-          @media (orientation: landscape) {
-            flex-direction: row;
-            justify-content: space-between;
-          }
-    }
-
-    *:link{
-      color: white;
-      text-decoration: none;
-    }
-
-    menu{
-      font-size: 1.8rem;
-      color: white;
-    }
-
-    .content{
-      padding: 3rem 1.5rem;
-      width: stretch;
-
-      @media (orientation: portrait) {
-        flex-direction: row;
+      *{
+        box-sizing: border-box;
       }
-      
-    }
 
-    .hero h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: white;
-    }
-
-    .hero p {
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-      color: #cac6c6;
-    }
-
-    .imgHero{
-      display: none;
-          filter: drop-shadow(9px 9px 10px black);
-    padding: 1vh;
-      @media (orientation: landscape) {
-        display: block;
-      }
-    }
-
-    #btnNav{
-      display: none;
-      font-size: 3rem;
-      color: white;
-    
-      @media (orientation: portrait) {
-        display: block;
-      }
-    }
-
-    #nav{
-   
-      display: none;
-      @media (orientation: landscape) {
+      html, body {
         display: flex;
-        gap:2vh;
-        margin-left:3vh;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
       }
-    }
 
-    .btn-buy {
-      background-color: #6b3012;
-      color: white;
-      padding: 16px 24px; /* Aumentado para melhor área de toque */
-      border: none;
-      width: fit-content;
-      border-radius: 5px;
-      font-size: 1.1rem;
-      cursor: pointer;
-
-      @media (max-width: 550px){
-      width: stretch;  
+      footer{
+        text-align: center;
+        background-color: #6b3012;
+        color: white;
       }
-    }
 
-    .fonteA{
-      color: white;
-    }
+      body {
+        flex-direction: column;
+        margin: 0;
+        /*
+        background-image: url(https://img.wallpapic-br.com/i3513-925-049/medium/paisagem-de-outono-cerca-madeira-casa-imagem-de-fundo.jpg);
+        */
+        background-repeat: round;
+        background-size: inherit;
+        
 
-    .benefits {
-      padding: 2rem 1.5rem;
-      color: #cac6c6;
-      height: 100%;
-      
-    }
-
-    .benefit-item {
-      
-
-      font-size: 1.2em;
-      display: grid;
-      gap: 0.5vh;
-      text-align: center;
-
-      &>img{
-      
-        border-radius: 1vh;
-        display: block;
-        width: 30vh;
-        height: 20vh;
-        filter:drop-shadow(2px 4px 6px black);
         @media (orientation: portrait) {
+          background-position: -82vh -2vh;
+        }
+      }
+
+      /* Links globais unificados */
+      a:-webkit-any-link, *:link {
+        color: white;
+        text-decoration: none;
+      }
+
+      /* ==========================================================================
+        2. ESTRUTURA DE LAYOUT (HEADER, MAIN, UTILITÁRIOS)
+        ========================================================================== */
+      header {
+        box-sizing: border-box;
+        padding: 1rem;
+        height: var(--altHeader); /* Usando a variável aqui para manter consistência */
+        text-align: center;
+        color: white;
+        backdrop-filter: brightness(0.3);
+        background: linear-gradient(45deg, var(--main-bg-color), transparent);
+        color: white;
+      }
+
+      footer{
+        backdrop-filter: brightness(0.3);
+        background: linear-gradient(-45deg, var(--main-bg-color), transparent);
+        color: white;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - var(--altHeader) - var(--altFooter));
+        overflow-y: scroll;
+        overscroll-behavior: none; /* Evita que o touch arraste a tela inteira para fora */
+      }
+
+      /* Classes Utilitárias de Flexbox */
+      .flexBetween {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+      }
+
+      .flexLayout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        @media (orientation: portrait) {
+          flex-direction: column;
+        }
+      }
+
+      /* ==========================================================================
+        3. COMPONENTES DE NAVEGAÇÃO
+        ========================================================================== */
+      .logo {
+        font-weight: bold;
+        display: flex;
+        gap: 1vh;
+        font-size: 1.2rem;
+        padding: 3vh;
+      }
+
+      menu {
+        font-size: 1rem;
+        color: white;
+      }
+
+      #nav {
+        display: none;
+        
+        @media (orientation: landscape) {
+          display: flex;
+          gap: 2vh;
+          margin-left: 3vh;
+        }
+      }
+
+      #btnNav {
+        display: none;
+        font-size: 3rem;
+        color: white;
+
+        @media (orientation: portrait) {
+          display: block;
+        }
+      }
+
+      /* ==========================================================================
+        4. SEÇÃO HERO & CONTEÚDO
+        ========================================================================== */
+      .content {
+            padding: 1rem 0.5rem;
+        flex: auto;
+
+        @media (orientation: portrait) {
+          flex-direction: row;
+        }
+      }
+
+      .hero {
+        display: flex;
+        text-align: center;
+
+        background-color: var(--main-bg-color);
+        flex-direction: column;
+        padding: 2vh;
+        flex: auto;
+        align-items: center;
+
+        @media (orientation: landscape) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      .hero p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: #cac6c6;
+      }
+
+      .imgHero > img {
+        border-radius: 2vh;
+        filter: drop-shadow(9px 9px 10px black);
+        padding: 1vh;
+        width: 18em;
+
+        @media (orientation:portrait) {
           display: none;
         }
       }
-    }
 
-    .benefit-item h3 {
-      color: #4ade4d;
-      
-    }
+      /* ==========================================================================
+        5. SEÇÃO BENEFITS (BENEFÍCIOS) & BOTÕES
+        ========================================================================== */
+      .benefits {
+        display: flex; /* Adicionado para alinhar com o justify-content antigo */
+        justify-content: center;
 
-
-
-    .flexLayout{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-
-      @media (orientation: portrait) {
-        flex-direction: column;
+        padding: 1rem 0.5rem;
+        color: var(--primary-color)
         
       }
-    }
 
+      .benefit-item {
+        font-size: 0.9em;
+        display: grid;
+        width: 100%;
+        text-align: center;
+        justify-items: center;
+      }
+
+      .benefit-item h3 {
+        color: #4ade4d;
+      }
+
+      .benefit-item > img {
+        border-radius: 1vh;
+        width: 30vh;
+        height: 20vh;
+        filter: drop-shadow(2px 4px 6px black);
+      }
+
+      .btn-buy {
+        background-color: #6b3012;
+        color: white;
+        padding: 16px 24px; 
+        border: none;
+        width: fit-content;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        cursor: pointer;
+
+        @media (max-width: 550px) {
+          width: stretch;
+        }
+      }
+
+      /* Classes Utilitárias de Cor Auxiliares */
+      .fonteA {
+        color: white;
+      }
+    
   </style>
 </head>
 <body>
@@ -228,10 +254,11 @@
       <a>Café da Fazenda</a>
     </div>
     <i id='btnNav' class="bi-list"></i>
+    
     <menu id="nav" class="" style="color: white;">
-      <a href="#">Home</a>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
+      <a href="#" class="bi-house"> Home</a>
+      <a href="#" class="bi-person"> Sobre</a>
+      <a href="#" class="bi-envelope"> Contato</a>
     </menu>
   </header>
 
@@ -250,20 +277,20 @@
 
     <section class="benefits flexLayout">
       <article class="benefit-item">
-        <h3 class="bi-graph-up-arrow"> Controle de qualidade</h3>
+        <h5 class="bi-graph-up-arrow"> Controle de qualidade</h5>
         <img src="https://s2-globorural.glbimg.com/36HizIz0seyH_FHcvudDaBxeY0o=/0x0:5596x3148/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_afe5c125c3bb42f0b5ae633b58923923/internal_photos/bs/2023/z/5/Qst2WgTUSf3i8jPPiSHg/saco-com-graos-de-cafe-na-mesa.jpg" alt="" srcset="">
         <p >Livre de agrotóxico</p>
       </article>
       <article class="benefit-item">
         
-        <h3 class="bi-coin"> Preço justo</h3>
+        <h5 class="bi-coin"> Preço justo</h5>
         <img src="https://consumidormoderno.com.br/wp-content/uploads/2025/06/alta-dos-precos-cafe-1-1024x462.webp" alt="" srcset="">
         <p>Entrega gratuita para assinantes</p>
         
       </article>
       <article class="benefit-item">
         
-        <h3 class="bi-train-front"> Entrega segura</h3>
+        <h5 class="bi-train-front"> Entrega segura</h5>
         <img src="https://previews.123rf.com/images/macrovectorart/macrovectorart2207/macrovectorart220701495/188358815-coffee-production-goods-transportation-with-delivery-van-and-worker-carrying-three-bags-of-beans.jpg" alt="" srcset="">
         <p>Correios, transportadora e particular</p>
         
@@ -271,5 +298,8 @@
     </section>
 
   </main>
+  <footer>
+    <p>&copy; Bruno Coelho All rights reserved.</p>
+  </footer>
 </body>
 </html>

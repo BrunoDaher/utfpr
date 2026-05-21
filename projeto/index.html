@@ -33,8 +33,6 @@
          
     </header>
 
- 
-
     <main class="app-container">
         
         <section class="hero-section">
@@ -128,7 +126,7 @@
 
           </article>
 
-             <article id="modulo-06" class="content-section " >
+          <article id="modulo-06" class="content-section " >
               
               <h2>Responsividade</h2>
               <p>
@@ -157,77 +155,142 @@
 
           </article>
 
+          <!--Carousel-->
            <article id="modulo-05" class="content-section">
 
               <h2>Animations</h2>
               <p>Utilizando  o máximo de html e css para uma landing page, aproveitando os recursos nativos</p>
 
-              <article class="backgrad flex flex-column justCenter gap-lg">    
+              <article class="vscode-hud flex flex-column justCenter gap-lg" style="border-radius: 2vh;">    
                 
               <div class="gallery flex flex-row justCenter  ">
                 <img src="https://media.istockphoto.com/id/1388339818/pt/foto/a-classic-red-telephone-booth-in-front-of-the-big-ben-clocktower-in-london.jpg?b=1&s=612x612&w=0&k=20&c=AUc6mjhAbWhc03HmiWqkXakAwR8w0vyRTIGSFxzzIKQ=" alt="london">
                 <img src="https://images.pexels.com/photos/4784349/pexels-photo-4784349.jpeg" alt="praia">
                 <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg" alt="paisagem">
                 <img src="https://cdn.pixabay.com/photo/2016/11/22/23/53/starfish-1851289_1280.jpg" alt="estreladomar">
-
-               
               </div>
 
               </article>
 
           </article>
 
-         
-
+          <!--layout-->
           <article id="modulo-03" class="content-section">
               
               <h2>Layout e prototipação</h2>
               <p>Ferramentas de prototipação e layout como figma e google stitch trazem resultados rápidos e facilitam a criação de layouts.</p>
 
-              <section style="justify-content: space-between; height: 100%;" class="flex flex-column vscode-hud gap-lg">    
 
-                <fieldset class="code-header" >
-                  <div class="flex flex-row gap2" style="justify-content: space-between;">
-                    
-                    <span class="">Menu</span>
-                    <span class="">Login</span>
-                    <span class="">Sair</span>
-                    
-                  </div>
-                  <legend class="down">header</legend>
-                </fieldset> 
+              <div class="flex flex-row col-sm row-md justCenter" style="gap:2vh;">
 
-                <div id="lay" class="flex flex-row gap-sm">
-              
-                  <fieldset class="code-aside" style="flex: 1;">
-                    <legend class="down">aside</legend>
+                  <section style="justify-content: space-between; height: 100%;" class="flex flex-column vscode-hud gap-lg">    
 
-                    <ul style="font-size: 0.5em" class="flex flex-column justBetween gap-sm">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Sobre</a></li>
-                      <li><a href="#">Contato</a></li>
-                      <li><a href="#">Serviços</a></li>
-                    </ul>
-
-                  </fieldset>
-                  
-                    <fieldset>
-                      <legend class="down">Main</legend>
-                      <div style="color:var(--text-main)" class="card-grid" style="color: var(--accent);">
-                        <a class="bi-phone" target="_blank" href="https://www.figma.com"> Figma</a>
-                        <a class="bi-google" target="_blank" href="https://stitch.withgoogle.com/"> Google Stitch</a>
+                    <fieldset class="code-header" >
+                      <div class="flex flex-row gap2" style="justify-content: space-between;">
+                        
+                        <span class="">Menu</span>
+                        <span class="">Login</span>
+                        <span class="">Sair</span>
+                        
                       </div>
+                      <legend class="down">header</legend>
+                    </fieldset> 
+
+                    <div id="lay" class="flex flex-row col-md gap-sm">
+                  
+                      <fieldset class="code-aside" style="flex: 1;">
+                        <legend class="down">aside</legend>
+
+                        <ul style="font-size: 0.5em" class="flex row-md flex-column justBetween gap-sm">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Sobre</a></li>
+                          <li><a href="#">Contato</a></li>
+                          <li><a href="#">Serviços</a></li>
+                        </ul>
+
+                      </fieldset>
+                      
+                        <fieldset>
+                          <legend class="down">Main</legend>
+                          <div style="color:var(--text-main)" class="card-grid" style="color: var(--accent);">
+                            <a class="bi-phone" target="_blank" href="https://www.figma.com"> Figma</a>
+                            <a class="bi-google" target="_blank" href="https://stitch.withgoogle.com/"> Google Stitch</a>
+                          </div>
+                        </fieldset>
+
+                    </div>
+
+                    <fieldset class="flex flex-row" style="justify-content: center; padding: 1vh;">
+                      <legend class="down">footer</legend>
+                      <a>Rodapé da página</a>
                     </fieldset>
+                    
 
-                </div>
+                  </section>
 
-                <fieldset class="flex flex-row" style="justify-content: center; padding: 1vh;">
-                  <legend class="down">footer</legend>
-                  <a>Rodapé da página</a>
-                </fieldset>
-                
+                    <section style="justify-content: space-between; height: 100%;" class="flex flex-column vscode-hud gap-lg">    
 
-              </section>
+                    <div class="card-header">
+                      <i class="bi-gear"> I.A Layout Builder</i>
+                    </div>
+                    <div class="card-body">
+                      <textarea disabled style="padding: 3vh; width: stretch;" class="vscode-hud"   >Que app voce deseja criar? </textarea>
+                    </div>
+                    <div class="card-footer">
+
+                    </div>
+
+
+                  </section>
+
+                  <section style="justify-content: space-between; height: 100%;" class="flex flex-column vscode-hud gap-lg">    
+
+                    <fieldset class="code-header" >
+                      <div class="flex flex-row gap2" style="justify-content: space-between;">
+                        
+                        <span class="">Menu</span>
+                        <span class="">Login</span>
+                        <span class="">Sair</span>
+                        
+                      </div>
+                      <legend class="down">header</legend>
+                    </fieldset> 
+
+                    <div id="lay" class="flex flex-row  gap-sm">
+                  
+                      <fieldset class="code-aside" style="flex: 1;">
+                        <legend class="down">aside</legend>
+
+                        <ul style="font-size: 0.5em" class="flex  flex-column justBetween gap-sm">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Sobre</a></li>
+                          <li><a href="#">Contato</a></li>
+                          <li><a href="#">Serviços</a></li>
+                        </ul>
+
+                      </fieldset>
+                      
+                        <fieldset>
+                          <legend class="down">Main</legend>
+                          <div style="color:var(--text-main)" class="card-grid" style="color: var(--accent);">
+                            <a class="bi-phone" target="_blank" href="https://www.figma.com"> Figma</a>
+                            <a class="bi-google" target="_blank" href="https://stitch.withgoogle.com/"> Google Stitch</a>
+                          </div>
+                        </fieldset>
+
+                    </div>
+
+                    <fieldset class="flex flex-row" style="justify-content: center; padding: 1vh;">
+                      <legend class="down">footer</legend>
+                      <a>Rodapé da página</a>
+                    </fieldset>
+                    
+
+                  </section>
+
+                 
+
+              </div>
 
           </article>
 
@@ -236,31 +299,39 @@
               <h2>Inteligencia Artificial no processo</h2>
               <p>Inteligência artificial em processos de desenvolvimento de software</p>
 
+              <section class=" flex flex-column gap-lg justCenter vscode-hud" style="border-radius: 2vh;">
 
-              <section class=" flex flex-column gap-lg justBetween card">
+                <div id="iaDiv" class="card-body flex flex-column row-md justBetween" style="gap:2vh" >
 
-                <div class="card-header">
+                  <div class="card " >
+                    <a>Validação HTML</a>
+                    <div class="bi-wrench" target="_blank" href="https://validator.w3.org/"> W3C </div>
+                  </div>
+                  
+                  <div class="card">
+                    <a>Icones</a>
+                    <div class="bi-bootstrap"> Boostrap</div>
+                  </div>
+                  
+                  <div class="card ">
+                    <a>Prompts inteligentes </a>
+                      <div class="bi-google"> Gemini</div>
+                  </div>
 
-                  Trabalho apresentado à disciplina de HTML e CSS , programa de pós-graduação em desenvolvimento Web com TS e Inteligência artificial - UTFPR Guarapuava
+                   <div class="card">
+                    <a>Refatoração</a>  
+                    <div class="bi-code"> Windsurf</div>
+                  </div>
 
-                </div>
-
-                <div class="mapaContainer card-body" >
-
-                    <img
-                    style="animation: nav 15s ease infinite;"
-                    class="imgTema" src="./img/fluxo.png">
+                  <div class="card ">
+                    <a>Agile</a>
+                    <div class="bi-github"> Github Copilot</div>
+                  </div>
 
                 </div>
 
                 <div
                     class="card-footer flex flex-row  justCenter gap-lg justCenter">    
-
-                
-                <div class="bi-code"> Windsurf</div>
-                <div class="bi-google"> Gemini</div>
-                <div class="bi-code"> VsCode</div>
-                <div class="bi-github"> Github Copilot</div>
               </div>
             </section>
 
@@ -268,8 +339,6 @@
 
           </article>
 
-        
-         
         </section>
 
     </main>

@@ -47,8 +47,8 @@ button{
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px var(--accent-glow);
+
+        box-shadow: 4px 7px 14px var(--bg-dark);
 }
 
 .btn-secondary {

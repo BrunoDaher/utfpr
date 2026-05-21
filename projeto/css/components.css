@@ -36,8 +36,11 @@ background-color: white;
     padding: 28px 20px;
 }
 
+
+
 #lay{
     height: 100%;
+
 }
 
 legend.down{
@@ -186,7 +189,7 @@ body{
 }
 
 .gallery > img{
-    animation: slide 10s linear infinite;
+    animation: slide 7s ease infinite;
     
         height: 18em;
         width: 18em;
@@ -280,6 +283,7 @@ a:focus-visible {
 
     .card-grid {
       display: grid;
+      justify-items: center;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
       padding: 2em;
@@ -292,16 +296,37 @@ a:focus-visible {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       text-align: left;
       
-      
     }
 
     .main-article{
         animation: fadeInUp 0.8s ease-out forwards;
     }
 
-    .card:nth-child(1) { animation-delay: 0.1s; }
-    .card:nth-child(2) { animation-delay: 0.3s; }
-    .card:nth-child(3) { animation-delay: 0.5s; }
+    #iaDiv{
+        animation: change 5s ease-in-out forwards;
+
+    }
+    
+
+    #iaDiv:nth-child(1) { 
+        animation-delay: 10s; 
+    }
+
+    #iaDiv > .card {
+
+        opacity: 0;
+            animation: fadeInUp 2s ease-in-out forwards;
+            
+    }
+
+    #iaDiv>.card:nth-child(1) { animation-delay: 0s; }
+    #iaDiv>.card:nth-child(2) { animation-delay: 2s; }
+    #iaDiv>.card:nth-child(3) { animation-delay: 4s; }
+    #iaDiv>.card:nth-child(4) { animation-delay: 6s; }
+    #iaDiv>.card:nth-child(5) { animation-delay: 8s; }
+    
+
+
 
     .card h2 {
       color: var(--accent-alt);
@@ -349,7 +374,7 @@ a:focus-visible {
 .content-section{
     display: flex;
 position: relative;
-    margin-top: 2vh;
+
         min-height: 300px;
     flex-direction: column;
     gap: var(--space-sm);
@@ -359,6 +384,7 @@ position: relative;
 
 .content-section p{
     text-align: center;
+        align-content: center;
     height: auto;
     font-size: .8em;
     text-align: center;
@@ -369,7 +395,7 @@ position: relative;
 @media (orientation: landscape) {
     .content-section p {
         height: 13vh;
-        padding: 2vh;
+        
     }
 }
 

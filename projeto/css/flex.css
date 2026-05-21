@@ -26,6 +26,31 @@
 
 }
 
+
+.row-md{
+      @media (min-width:768px) {
+        flex-direction: row !important;
+    }
+}
+
+.col-sm{
+    @media (max-width:768px) {
+        flex-direction: column !important;
+    }
+}
+
+.col-md{
+     @media (min-width:768px) {
+        flex-direction: column !important;
+    }
+}
+
+.row-sm{
+    @media (max-width:480px) {
+        flex-direction: row !important;
+    }
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -42,3 +67,10 @@
     margin-bottom: var(--space-lg);
 }
 
+.selfEnd{
+    align-self: self-end;
+}
+
+.selfStart{
+    align-self: self-start;
+}
