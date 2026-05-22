@@ -1,5 +1,7 @@
 ## Resumo por tópico implementado no projeto
 
+Link para o projeto: <a href='brunodaher.github.io/utfpr/projeto'>
+
 1. **Estrutura Semântica Rigorosa**
    - O HTML usa `header`, `main`, `article`, `section`, `aside` e `footer`.
    - A hierarquia de conteúdo está clara e facilita leitura por navegadores e leitores de tela.
@@ -30,7 +32,7 @@
 
 7. **Dark Mode Nativo**
    - Implementado `@media (prefers-color-scheme: light)` em `projeto/css/components.css`.
-   - Existe também toggle manual via `#toggle-tema` e `body:has(#toggle-tema:checked)`.
+   - Existe também toggle manual via `#toggle-tema` e `body:has(#toggle-tema:checked)`. O que achei muito interessante, não sabia dessa possibilidade de uma "chave" via css. 
 
 8. **Sticky Headers e Scroll Snap**
    - O cabeçalho usa `position: sticky; top: 0;` para permanecer visível.
@@ -40,7 +42,7 @@
 9. **Otimização de Performance e Assets**
    - O CSS está modularizado para reduzir acoplamento e facilitar manutenção.
    - Há uso de variáveis e importação organizada de módulos.
-   - Ainda não há WebP local ou lazy loading explícito em imagens, mas a estrutura suporta melhoria.
+   - foi implementado lazy loading pras imagens
 
 10. **Acessibilidade Avançada com Teclado**
    - `a:focus-visible` provê indicação clara de foco.
