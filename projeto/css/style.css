@@ -12,13 +12,18 @@
 }
 
 a{
-  font-size:0.8rem;
+  font-size:1rem;
 }
+
+.span{
+    font-size: 1.3em;;
+}
+
 
 .vscode-hud {
   
   background-color: var(--shadow-strong);
-      font-size: 30px;
+      font-size: 0.8em;
   font-family: 'Fira Code', Consolas, monospace;
 
   color: var(--accent-alt);            /* Texto padrão */

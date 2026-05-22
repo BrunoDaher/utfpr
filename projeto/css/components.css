@@ -195,7 +195,7 @@ body{
     animation: slide 7s ease infinite;
     
         height: 18em;
-        width: 18em;
+        width: 22em;
     
     border-radius: 1vh;
 }
@@ -299,15 +299,30 @@ a:focus-visible {
 
     
 
-    .main-article{
+    #mainArticle{
+
+        width: 100%;
+
+        @media (min-width:768px) {
+            width: 70%;
+            justify-self: center;
+        }
+
         animation: fadeInUp 0.8s ease-out forwards;
     }
 
     #iaDiv{
          justify-content: space-around;
         /*animation: change 1s ease-in-out forwards;*/
+          animation-timeline: scroll(root);
+            animation-range: 600px 1000px; 
         
     }
+
+    body {
+  timeline-scope: --gatilho-footer;
+}
+    
     
 
     #iaDiv:nth-child(1) { 
@@ -315,6 +330,14 @@ a:focus-visible {
     }
 
     #iaDiv > .card {
+
+          /* Chama o mesmo nome que você especificou na linha do tempo do footer */
+        animation-timeline: scroll(root);
+  
+  /* CALCULO GATILHO: 
+     O início (0%) da animação será a altura total da página menos a altura do footer.
+     Mude os "200px" para o tamanho exato do seu footer. */
+  animation-range: calc(100% - 200px) 100%;
 
         opacity: 0;
             animation: fadeInUp 1s ease-in-out forwards;
