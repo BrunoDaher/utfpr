@@ -19,6 +19,16 @@ a{
     font-size: 1.3em;;
 }
 
+label{
+  transition: all 0.5s;
+}
+
+label:hover, label:focus{
+  cursor: pointer;
+  color: var(--accent);
+
+  transition: all 0.5s;
+}
 
 .vscode-hud {
   
