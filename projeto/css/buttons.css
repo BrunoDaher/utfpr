@@ -8,11 +8,26 @@ button{
 }
 
  #toggle-tema { 
-    
-    display: none;
+        
+  opacity: 0;
+    width: 0;
+    height: 0;
 
 }
 
+#btnTema:has(#toggle-tema:focus-visible),#btnTema:hover, #btnTema:focus {
+    cursor: pointer;
+    color: var(--accent-glow);
+    box-shadow: 1px 1px 8px 3px var(--accent-glow);
+    transition: all 0.5s;
+    padding: 1vh;
+    border-radius: 1vh;
+}
+
+
+#btnTem > #toggle-tema:checked{
+    filter: invert(1);
+}
 
 
    /* O Botão/Label Visual da Chave */

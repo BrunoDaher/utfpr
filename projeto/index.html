@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <input type="checkbox" id="toggle-tema">
+  
 
     <header class="main-header">
         <nav class="nav-container" style="font-size: 1em;">
@@ -20,7 +20,10 @@
             </div>
 
             <div class="header-actions">
-                <label for="toggle-tema" class="bi-paint-bucket"> Tema</label>
+                <label  id="btnTema" class="bi-paint-bucket"> 
+                  <input tabindex="0"  type="checkbox" id="toggle-tema">
+                  <span>Tema</span>
+                </label>
             </div>
         </nav>
 
@@ -37,14 +40,9 @@
                 <p>Este projeto é um estudo metalinguístico sobre a construção de interfaces modernas, utilizando apenas CSS nativo e HTML semântico.</p>
                 
                 <div class="hero-actions">
-                    <button class="btn btn-secondary">
-                      <a href="https://css-tricks.com/" target="_blank">Documentação</a></button>
-                    <button class="btn btn-secondary">
-                      <a href="#modulo-03">Layout</a>
-                    </button>
-                    <button class="btn btn-secondary">
-                      <a href="#ia">I.A</a>
-                    </button>
+                    <a class="btn btn-secondary" href="https://css-tricks.com/" target="_blank">Documentação</a>
+                    <a class="btn btn-secondary" href="#modulo-03">Layout</a>
+                    <a class="btn btn-secondary" href="#ia" >I.A</a>
                 </div>
             </div>
 
@@ -196,10 +194,10 @@
                         <legend class="down">aside</legend>
 
                         <ul style="font-size: 0.5em" class="flex flex-row justBetween gap-sm">
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#">Sobre</a></li>
-                          <li><a href="#">Contato</a></li>
-                          <li><a href="#">Serviços</a></li>
+                          <li><span href="#">Home</span></li>
+                          <li><span href="#">Sobre</span></li>
+                          <li><span href="#">Contato</span></li>
+                          <li><span href="#">Serviços</span></li>
                         </ul>
 
                       </fieldset>
@@ -256,10 +254,10 @@
                         <legend class="down">aside</legend>
 
                         <ul style="font-size: 0.5em" class="flex  flex-column justBetween gap-sm">
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#">Sobre</a></li>
-                          <li><a href="#">Contato</a></li>
-                          <li><a href="#">Serviços</a></li>
+                          <li><span href="#">Home</span></li>
+                          <li><span href="#">Sobre</span></li>
+                          <li><span href="#">Contato</span></li>
+                          <li><span href="#">Serviços</span></li>
                         </ul>
 
                       </fieldset>
@@ -267,8 +265,8 @@
                         <fieldset>
                           <legend class="down">Main</legend>
                           <div style="color:var(--text-main)" class="card-grid" style="color: var(--accent);">
-                            <a class="bi-phone" target="_blank" href="https://www.figma.com"> Figma</a>
-                            <a class="bi-google" target="_blank" href="https://stitch.withgoogle.com/"> Google Stitch</a>
+                            <span class="bi-phone" target="_blank" href="https://www.figma.com"> Figma</span>
+                            <span class="bi-google" target="_blank" href="https://stitch.withgoogle.com/"> Google Stitch</span>
                           </div>
                         </fieldset>
 
@@ -276,9 +274,8 @@
 
                     <fieldset class="flex flex-row" style="justify-content: center; padding: 1vh;">
                       <legend class="down">footer</legend>
-                      <a>Rodapé da página</a>
+                      <span>Rodapé da página<span>
                     </fieldset>
-                    
 
                   </section>
 

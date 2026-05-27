@@ -31,7 +31,7 @@
 
 @keyframes destaque {
   0%{
-    color:white;
+    color:var(--accent-glow);
     transform: scale(1);
      
   }
@@ -40,7 +40,7 @@
     transform: scale(1.2)
   }
   100%{ 
-    color:white;
+    color:var(--accent-glow);
     transform: scale(1)
   }
 }

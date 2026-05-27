@@ -48,3 +48,16 @@ Link para o projeto: <a href='https://brunodaher.github.io/utfpr/projeto'>Projet
    - `a:focus-visible` provê indicação clara de foco.
    - O HTML semântico suporta navegação por teclado.
    - Falta um pouco de ARIA explicita, mas a base semântica e o foco já melhoram acessibilidade.
+
+
+Correções pós avaliação
+
+04. Alterada responsividade através dos media queries orientados para mobile-first, através dos média queries.
+
+07. Dark Mode Nativo (Pesquisa): incluido o input na lista das tags - via tag-index:0, e associado comportamento visual quando sob foco ou hover. Agora via space o comando troca o tema, quando teclado. Refeita a paleta de cores para o Dark, por IA - sugestão do gemini, mas ainda não fiquei satisfeito, pras próximas pretendo buscar umas cores mais harmônicas. 
+
+
+09. Anotada sugestão para usar imagens webP e possivelmente hospedá-las em repositório local.
+
+10. Convertidos e otimizados os aninhamentos estilo "<button><a>" para um deles, evitando navegação desnessária e confusão dos leitores, aplicado ARIA para indicar também os estados dos botões. Aproveitei a oportunidade para trocar as tags <a> desnecessárias por <span>, pra evitar navegação não intencional. 
+
