@@ -1,6 +1,6 @@
 ## Resumo por tópico implementado no projeto
 
-Link para o projeto: <a href='brunodaher.github.io/utfpr/projeto'>Projeto</a>
+Link para o projeto: <a href='https://brunodaher.github.io/utfpr/projeto'>Projeto</a>
 
 1. **Estrutura Semântica Rigorosa**
    - O HTML usa `header`, `main`, `article`, `section`, `aside` e `footer`.
