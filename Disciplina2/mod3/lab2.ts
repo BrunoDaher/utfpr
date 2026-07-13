@@ -103,18 +103,17 @@ Tarefa 5: Identificação de erro — sistema travado
         
         let nota:Array<any> = [];
 
-        lista.forEach((pedido:Array<string>,indice) => {
+        lista.forEach((pedido,indice) => {
 
-         /*   for (let i = 0; i < pedido.length; i++) {
+            for (let i = 0; i < pedido.length; i++) {
                 const item = pedido[i];
-                //console.log(`Pedido - ${index + 1} Item: ${item}`)
-            }*/
+                console.log(`Pedido - ${indice + 1} Item: ${item}`)
+            }
 
             pedido.forEach((item: string) => {
                 console.log(`Pedido - ${indice + 1} Item : ${item}`)
             });
             
-            //nota.push(`Pedido ${index} - Item:${item}`)
         });
         
         return nota;
