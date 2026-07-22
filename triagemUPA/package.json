@@ -1,0 +1,25 @@
+{
+  "name": "triagemupa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test --import tsx tests/**/*.test.ts",
+    "start": "npx tsx src/index.ts",
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ts-pattern": "^5.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2",
+    "vite": "^5.4.11"
+  },
+  "type": "module"
+}

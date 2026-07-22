@@ -1,0 +1,647 @@
+/* ====================================================================
+   UPA Paraná — Design System
+   Tema: Branco & Laranja — Identidade Visual da UPA do Paraná
+   ==================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* ── Paleta Principal ── */
+    --orange-50:  #fff7ed;
+    --orange-100: #ffedd5;
+    --orange-200: #fed7aa;
+    --orange-300: #fdba74;
+    --orange-400: #fb923c;
+    --orange-500: #f97316;
+    --orange-600: #ea6c0a;
+    --orange-700: #c2510a;
+    --orange-800: #9a3e07;
+
+    /* ── Cores de Fundo ── */
+    --bg-primary:   #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-tertiary:  #f1f3f5;
+    --bg-hover:     #ffe8d6;
+
+    /* ── Texto ── */
+    --text-primary:   #1a1a2e;
+    --text-secondary: #4a4a6a;
+    --text-muted:     #8888aa;
+    --text-on-orange: #ffffff;
+
+    /* ── Acento principal ── */
+    --accent:         var(--orange-500);
+    --accent-hover:   var(--orange-600);
+    --accent-light:   var(--orange-50);
+    --accent-border:  var(--orange-200);
+
+    /* ── Bordas & Sombras ── */
+    --border-color:   #e2e6ea;
+    --border-focus:   var(--orange-400);
+    --shadow-sm:      0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md:      0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg:      0 8px 24px rgba(0,0,0,0.1);
+    --shadow-orange:  0 4px 16px rgba(249,115,22,0.25);
+
+    /* ── Prioridades (mantidas conforme Manchester) ── */
+    --priority-emergencia:    #d32f2f;
+    --priority-muito-urgente: #f57c00;
+    --priority-urgente:       #f9a825;
+    --priority-pouco-urgente: #388e3c;
+    --priority-nao-urgente:   #1565c0;
+
+    /* ── Tipografia ── */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body:    'Inter', sans-serif;
+
+    /* ── Raios ── */
+    --radius-sm:  6px;
+    --radius-md:  12px;
+    --radius-lg:  16px;
+    --radius-xl:  24px;
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ── App Container ──────────────────────────────────────────────────── */
+#app {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────── */
+.app-header {
+    background: linear-gradient(135deg, var(--orange-500) 0%, var(--orange-700) 100%);
+    margin: 0 -2rem 2.5rem;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(249,115,22,0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-header::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+}
+
+.app-header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    right: 120px;
+    width: 140px;
+    height: 140px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+}
+
+.app-title {
+    font-family: var(--font-heading);
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+}
+
+.app-subtitle {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.8);
+    margin-top: 0.2rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Layout Grid ─────────────────────────────────────────────────────── */
+.app-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 1.75rem;
+}
+
+@media (max-width: 1024px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* ── Card ────────────────────────────────────────────────────────────── */
+.card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-md);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-primary);
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--orange-100);
+}
+
+.card-title svg {
+    color: var(--orange-500);
+    flex-shrink: 0;
+}
+
+/* ── Forms ───────────────────────────────────────────────────────────── */
+.form-group {
+    margin-bottom: 1.1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.form-control {
+    width: 100%;
+    background-color: var(--bg-tertiary);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.7rem 0.95rem;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    background-color: var(--bg-secondary);
+    box-shadow: 0 0 0 3px rgba(249,115,22,0.15);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+select.form-control {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23f97316'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+.error-message {
+    color: var(--priority-emergencia);
+    font-size: 0.78rem;
+    margin-top: 0.3rem;
+    display: none;
+    font-weight: 500;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.72rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--orange-500) 0%, var(--orange-600) 100%);
+    color: var(--text-on-orange);
+    box-shadow: 0 2px 8px rgba(249,115,22,0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--orange-600) 0%, var(--orange-700) 100%);
+    box-shadow: var(--shadow-orange);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1.5px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--accent-border);
+    color: var(--orange-700);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--priority-emergencia) 0%, #b71c1c 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(211,47,47,0.3);
+}
+
+.btn-danger:hover {
+    box-shadow: 0 4px 16px rgba(211,47,47,0.4);
+    transform: translateY(-1px);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ── Statistics Grid ─────────────────────────────────────────────────── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.9rem;
+}
+
+.stat-card {
+    background: var(--bg-tertiary);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: border-color 0.2s;
+}
+
+.stat-card:hover {
+    border-color: var(--accent-border);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.stat-value.emergencia-sim {
+    color: var(--priority-emergencia);
+    animation: pulse 2s infinite;
+}
+
+.stat-value.emergencia-nao {
+    color: var(--priority-pouco-urgente);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.55; }
+}
+
+/* ── Symptoms Tags ───────────────────────────────────────────────────── */
+.symptoms-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.75rem;
+}
+
+.symptom-tag {
+    background-color: var(--orange-50);
+    border: 1px solid var(--orange-200);
+    color: var(--orange-700);
+    font-size: 0.73rem;
+    padding: 0.22rem 0.65rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* ── Queue Header ────────────────────────────────────────────────────── */
+.queue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--orange-100);
+}
+
+.queue-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.queue-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.queue-count {
+    background: var(--orange-50);
+    border: 1px solid var(--orange-200);
+    color: var(--orange-700);
+    border-radius: 9999px;
+    padding: 0.2rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+/* ── Queue List ──────────────────────────────────────────────────────── */
+.queue-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.queue-item {
+    background: var(--bg-secondary);
+    border: 1.5px solid var(--border-color);
+    border-left: 5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1.4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.queue-item:hover {
+    transform: translateX(3px);
+    box-shadow: var(--shadow-md);
+    background: var(--bg-tertiary);
+}
+
+/* ── Priority Borders ────────────────────────────────────────────────── */
+.priority-emergencia    { border-left-color: var(--priority-emergencia)    !important; background: #fff5f5 !important; }
+.priority-muito-urgente { border-left-color: var(--priority-muito-urgente) !important; background: #fff8f0 !important; }
+.priority-urgente       { border-left-color: var(--priority-urgente)       !important; background: #fefce8 !important; }
+.priority-pouco-urgente { border-left-color: var(--priority-pouco-urgente) !important; background: #f0fdf4 !important; }
+.priority-nao-urgente   { border-left-color: var(--priority-nao-urgente)   !important; background: #eff6ff !important; }
+
+/* ── Priority Badges ─────────────────────────────────────────────────── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.22rem 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 800;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.badge-emergencia    { background: rgba(211,47,47,0.1);   color: #b71c1c; border: 1px solid rgba(211,47,47,0.25); }
+.badge-muito-urgente { background: rgba(245,124,0,0.1);   color: #e65100; border: 1px solid rgba(245,124,0,0.25); }
+.badge-urgente       { background: rgba(249,168,37,0.12); color: #f57f17; border: 1px solid rgba(249,168,37,0.3); }
+.badge-pouco-urgente { background: rgba(56,142,60,0.1);   color: #1b5e20; border: 1px solid rgba(56,142,60,0.25); }
+.badge-nao-urgente   { background: rgba(21,101,192,0.1);  color: #0d47a1; border: 1px solid rgba(21,101,192,0.25); }
+
+/* ── Patient Info ────────────────────────────────────────────────────── */
+.patient-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.patient-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.patient-name {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.patient-details {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.patient-symptoms {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-tertiary);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-top: 0.2rem;
+    border: 1px solid var(--border-color);
+}
+
+.patient-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    min-width: 130px;
+}
+
+.wait-time-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.wait-time-value {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--orange-600);
+    text-align: right;
+}
+
+/* ── Empty Queue State ───────────────────────────────────────────────── */
+.empty-queue {
+    text-align: center;
+    padding: 3.5rem 2rem;
+    color: var(--text-muted);
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bg-tertiary);
+}
+
+.empty-icon {
+    font-size: 2.8rem;
+    margin-bottom: 0.25rem;
+}
+
+/* ── Modal ───────────────────────────────────────────────────────────── */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(26, 26, 46, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.modal-card {
+    background: var(--bg-secondary);
+    border: 1.5px solid var(--border-color);
+    border-top: 5px solid var(--orange-500);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    width: 480px;
+    max-width: 92%;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.18);
+    text-align: center;
+    animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.88); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+.modal-header {
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--orange-500);
+    margin-bottom: 0.6rem;
+}
+
+.modal-patient-name {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.modal-patient-priority {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.modal-patient-details {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.75rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-patient-details strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-tertiary); }
+::-webkit-scrollbar-thumb {
+    background: var(--orange-300);
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--orange-500);
+}
+
+/* ── Selection ───────────────────────────────────────────────────────── */
+::selection {
+    background: var(--orange-200);
+    color: var(--orange-800);
+}
