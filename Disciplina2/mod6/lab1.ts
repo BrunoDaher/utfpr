@@ -1,5 +1,8 @@
 /* 
-Neste laboratório, você refatorará um arquivo único e desorganizado, separando-o em um sistema de módulos limpo, encapsulado e tipado, utilizando exportações nomeadas e padrões conforme as boas práticas do ecossistema moderno.
+Neste laboratório, você refatorará um arquivo único e desorganizado, separando-o em: 
+um sistema de módulos limpo, encapsulado e tipado, 
+utilizando exportações nomeadas e 
+padrões conforme as boas práticas do ecossistema moderno.
 
 //— arquivo.ts
 // ============================================================================
@@ -7,7 +10,7 @@ Neste laboratório, você refatorará um arquivo único e desorganizado, separan
 // ============================================================================
  
 // --- TUDO MISTURADO NO MESMO ESCOPO: VALIDADORES, INTERFACES E CLASSES ---
- 
+
 interface ResultadoValidacao {
     valido: boolean;
     mensagem: string;
@@ -68,8 +71,14 @@ auth.logout();
  
 Tarefa 1: Isolando Regras de Negócio com Named Exports
 Crie uma pasta chamada sistema/ e, dentro dela, um arquivo chamado validadores.ts.
-Declare e exporte de forma nomeada as funções validarEmail(email: string): boolean e validarCpf(cpf: string): boolean. No mesmo arquivo, exporte uma interface chamada ResultadoValidacao.
-Crie o arquivo principal index.ts na raiz e importe essas funções usando a sintaxe de chaves para testar sua aplicação.
+Declare e exporte de forma nomeada as funções 
+ validarEmail(email: string): boolean e
+ validarCpf(cpf: string): boolean. 
+ 
+ -- No mesmo arquivo, exporte uma interface chamada ResultadoValidacao.
+Crie o arquivo principal index.ts na raiz e:
+1 importe essas funções usando a sintaxe de chaves para testar sua aplicação.
+
 Tarefa 2: Encapsulamento com Default Exports
 Dentro da pasta sistema/, crie um arquivo chamado GerenciadorAutenticacao.ts.
 Desenvolva uma classe chamada GerenciadorAutenticacao que contenha métodos para login e logout de usuários. Coloque um método público de validação que faça uso interno dos validadores do arquivo anterior.
