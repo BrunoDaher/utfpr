@@ -36,5 +36,5 @@ jobs:
       - name: Instalar Navegadores do Playwright
         run: yarn playwright install --with-deps chromium
 
-      - name: Testes Ponta a Ponta (Playwright E2E)
+      - name: Testes Ponta a Ponto (Playwright E2E)
         run: yarn test:e2e
