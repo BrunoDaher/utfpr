@@ -1,15 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/utfpr/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UTFPR Store — Catálogo & Gestão de Produtos</title>
-    <meta name="description" content="Aplicação de e-commerce e gestão administrativa desenvolvida com React, TypeScript, Mantine UI e Zod para a UTFPR." />
-    <script type="module" crossorigin src="/utfpr/assets/index-DsjWwsvk.js"></script>
-    <link rel="stylesheet" crossorigin href="/utfpr/assets/index-BTwUXG1m.css">
+    <meta charset="utf-8" />
+    <title>Redirecionando...</title>
+    <script>
+      const path = window.location.pathname;
+      const targetBase = '/utfpr/Disciplina3/Projeto/projeto-final/dist/';
+      if (path.includes('/Disciplina3/Projeto/projeto-final/dist')) {
+        window.location.replace(targetBase);
+      } else {
+        window.location.replace('/utfpr/');
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <p>Redirecionando para a aplicação...</p>
   </body>
 </html>

@@ -3,7 +3,7 @@
 [![CI - Integracao Continua](https://github.com/BrunoDaher/utfpr/actions/workflows/ci.yml/badge.svg)](https://github.com/BrunoDaher/utfpr/actions)
 [![CD - Deploy Continuo GitHub Pages](https://github.com/BrunoDaher/utfpr/actions/workflows/cd.yml/badge.svg)](https://github.com/BrunoDaher/utfpr/actions)
 
-> **Deploy em Produção (GitHub Pages):** [https://brunodaher.github.io/utfpr/](https://brunodaher.github.io/utfpr/)  
+> **Deploy em Produção (GitHub Pages):** [https://brunodaher.github.io/utfpr/Disciplina3/Projeto/projeto-final/dist/](https://brunodaher.github.io/utfpr/Disciplina3/Projeto/projeto-final/dist/)  
 > **Repositório GitHub:** [https://github.com/BrunoDaher/utfpr](https://github.com/BrunoDaher/utfpr)
 
 ---

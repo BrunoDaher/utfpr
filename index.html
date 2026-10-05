@@ -1,15 +1,121 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/utfpr/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UTFPR Store — Catálogo & Gestão de Produtos</title>
-    <meta name="description" content="Aplicação de e-commerce e gestão administrativa desenvolvida com React, TypeScript, Mantine UI e Zod para a UTFPR." />
-    <script type="module" crossorigin src="/utfpr/assets/index-DsjWwsvk.js"></script>
-    <link rel="stylesheet" crossorigin href="/utfpr/assets/index-BTwUXG1m.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="profile">
+                <h1>Bruno Oliveira</h1>
+                    <a class="bi-code-square"> Dev</a>
+            </div>
+            <div class="links">
+                <a target="_blank" href="https://github.com/BrunoDaher/">
+                    <i class="bi-github"></i>
+                     github 
+                </a>
+                <a href="https://linkedin.com/in/brunodaher">
+                    <i class="bi-linkedin"></i>
+                    linkedin 
+                </a>
+            </div>
+        </header>
+
+        <div class="intro justify">
+            <p>Olá pessoal, meu nome é Bruno Coelho, desenvolvedor , 
+            atualmente trabalhando com: <span class="highlight-text">typescript, html5, node.js e js.</span>
+            Esta é uma página dedicada à pós graduação em desenvolvimento web, onde compartilho meus projetos e aprendizados.
+            </a>
+            
+            </a>
+            </p>
+        </div>
+
+          <section>
+            <div class="section-title">Projetos do Curso</div>
+            
+            <article class="project-item">
+                <div class="project-header">
+                    <div  class="project-name">
+                        <a href="https://brunodaher.github.io/utfpr/Disciplina1/projeto" target="_blank">Landing Page Conceito</a>
+                        <span class="status-dot"></span></div>
+                    <div class="published-info">Acessibilidade, Temas</div>
+                </div>
+                <div class="project-desc">Um busca de letras com pwa, usando apis externas Google Api e LastFM</div>
+                <div class="tags">
+                    <span class="tag">html + css</span>
+                    <span class="tag">mobile first</span>
+                    <span class="tag">tema</span>
+                    <span class="tag">acessibilidade</span>
+                </div>
+            </article>
+
+            <article class="project-item">
+                <div class="project-header">
+                    <div class="project-name">
+                        <a href="https://brunodaher.github.io/utfpr/Disciplina3/Projeto/projeto-final/dist/" target="_blank">Disciplina 3 — Projeto Final: UTFPR Store</a>
+                        <span class="status-dot"></span></div>
+                    <div class="published-info">React, TypeScript, Mantine UI, Zod, Vitest, Playwright, CI/CD</div>
+                </div>
+                <div class="project-desc">Aplicação web completa de e-commerce e gestão administrativa consumindo a API DummyJSON com catálogo, filtros, paginação, carrinho de compras reativo, autenticação JWT e área administrativa protegida.</div>
+                <div class="tags">
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Mantine UI</span>
+                    <span class="tag">Zod</span>
+                    <span class="tag">Vitest</span>
+                    <span class="tag">Playwright</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <div class="section-title">Projetos pessoais</div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    
+                    <div  class="project-name">
+                        <a href="https://brunodaher.github.io/letra" target="_blank">Busca Letra</a>
+                        <span class="status-dot"></span></div>
+                    <div class="published-info">Apis Externas, Storage e PWA</div>
+                </div>
+                <div class="project-desc">Um busca de letras com pwa, usando apis externas Google Api e LastFM</div>
+                <div class="tags">
+                    <span class="tag">pwa</span>
+                    <span class="tag">java script</span>
+                    <span class="tag">web components</span>
+                    <span class="tag">APIs</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div class="project-name">VirtuaGuitar<span class="status-dot"></span></div>
+                    <div class="published-info">Chat, Guitarra Virtual, Storage, PWA</div>
+                </div>
+                
+                <div class="project-desc">Aplicação pra aula de música, com braço virtual de guitarra interativo e conteúdo em vídeo. Chat pra comunicação com instrutor. </div>
+                <div class="tags">
+                    <span class="tag">npm</span>
+                    <span class="tag">nodejs</span>
+                    <span class="tag">web audio</span>
+                    <span class="tag">firebase auth</span>
+                    <span class="tag">firebase realtime-database</span>
+                    <span class="tag">supabase</span>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+</body>
 </html>

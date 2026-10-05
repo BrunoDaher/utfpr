@@ -4,8 +4,8 @@ node_modules/
 .pnp.js
 
 # Build outputs
-dist/
-dist-ssr/
+# (allow tracking dist for GitHub Pages static hosting like lab2 and lab3)
+!Disciplina3/**/dist/
 build/
 
 # Logs
