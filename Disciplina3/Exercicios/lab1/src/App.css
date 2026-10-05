@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #f0f7f9;
+  background-image: radial-gradient(circle at top, #d2f0eb, #f0f7f9 40%);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: end;
+  padding: 16px 40px;
+  background: linear-gradient(to right, #3a93b0, #c8dde8);
+  /* Light teal color matching mockup */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.brand {
+  display: flex;
+
+  align-items: inherit;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #e0e9f6;
+  margin-right: 32px;
+}
+
+.brandIcon {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+  /* Blue icon */
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #e0e9f6;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.appContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.propertyGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: balance;
+  gap: 24px;
+  justify-items: center;
+}
+
+/* Button overrides matching the mockup */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #3b82f6;
+  /* Light blue like mockup */
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  color: #3b82f6;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #eff6ff;
+}
+
+@media (max-width: 768px) {
+  .propertyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 16px 20px;
+  }
+
+  .appContainer {
+    padding: 20px;
+  }
+}
