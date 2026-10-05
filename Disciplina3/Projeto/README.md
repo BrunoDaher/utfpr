@@ -3,7 +3,7 @@
 [![CI - Integracao Continua](https://github.com/BrunoDaher/utfpr/actions/workflows/ci.yml/badge.svg)](https://github.com/BrunoDaher/utfpr/actions)
 [![CD - Deploy Continuo GitHub Pages](https://github.com/BrunoDaher/utfpr/actions/workflows/cd.yml/badge.svg)](https://github.com/BrunoDaher/utfpr/actions)
 
-> **Deploy em Produção (GitHub Pages):** [https://brunodaher.github.io/utfpr/Disciplina3/Projeto/projeto-final/dist/](https://brunodaher.github.io/utfpr/Disciplina3/Projeto/projeto-final/dist/)  
+> **Deploy em Produção (GitHub Pages):** [https://brunodaher.github.io/utfpr/Disciplina3/Projeto/dist/](https://brunodaher.github.io/utfpr/Disciplina3/Projeto/dist/)  
 > **Repositório GitHub:** [https://github.com/BrunoDaher/utfpr](https://github.com/BrunoDaher/utfpr)
 
 ---
@@ -35,7 +35,7 @@ Para testar a área administrativa protegida (`/admin`), utilize as seguintes cr
 1. Clone o repositório:
    ```bash
    git clone https://github.com/BrunoDaher/utfpr.git
-   cd utfpr/Disciplina3/Projeto/projeto-final
+   cd utfpr/Disciplina3/Projeto
    ```
 
 2. Instale as dependências:
