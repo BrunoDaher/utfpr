@@ -20,9 +20,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: Disciplina3/Projeto/projeto-final
 
     steps:
       - name: Checkout Repositorio
@@ -36,13 +33,15 @@ jobs:
           cache-dependency-path: Disciplina3/Projeto/projeto-final/yarn.lock
 
       - name: Instalar Dependencias
+        working-directory: Disciplina3/Projeto/projeto-final
         run: yarn install --frozen-lockfile
 
       - name: Build de Producao
+        working-directory: Disciplina3/Projeto/projeto-final
         run: yarn build
 
-      - name: Fallback SPA para GitHub Pages (404.html)
-        run: cp dist/index.html dist/404.html
+      - name: Limpar node_modules para upload
+        run: rm -rf Disciplina3/Projeto/projeto-final/node_modules
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -50,7 +49,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'Disciplina3/Projeto/projeto-final/dist'
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
