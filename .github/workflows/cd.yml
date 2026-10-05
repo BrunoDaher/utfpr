@@ -40,8 +40,18 @@ jobs:
         working-directory: Disciplina3/Projeto/projeto-final
         run: yarn build
 
-      - name: Limpar node_modules para upload
-        run: rm -rf Disciplina3/Projeto/projeto-final/node_modules
+      - name: Montar site (raiz + disciplinas, preservando caminhos fisicos)
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' --exclude='.github' --exclude='_site' \
+            --exclude='node_modules' --exclude='src' --exclude='tests' \
+            --exclude='test-results' --exclude='playwright-report' \
+            --exclude-from=<(echo) ./ _site/
+          find _site -type l -delete
+          cp Disciplina3/Projeto/projeto-final/dist/index.html Disciplina3/Projeto/projeto-final/dist/404.html
+          cp -r Disciplina3/Projeto/projeto-final/dist/. _site/Disciplina3/Projeto/projeto-final/dist/
+          touch _site/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -49,7 +59,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
