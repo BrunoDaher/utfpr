@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -40,17 +40,23 @@ jobs:
         working-directory: Disciplina3/Projeto/projeto-final
         run: yarn build
 
-      - name: Montar site (raiz + disciplinas, preservando caminhos fisicos)
+      - name: Preparar pasta de deploy
         run: |
           mkdir -p _site
           rsync -a \
-            --exclude='.git' --exclude='.github' --exclude='_site' \
-            --exclude='node_modules' --exclude='src' --exclude='tests' \
-            --exclude='test-results' --exclude='playwright-report' \
-            --exclude-from=<(echo) ./ _site/
-          find _site -type l -delete
+            --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_site' \
+            --exclude='node_modules' \
+            --exclude='src' \
+            --exclude='tests' \
+            --exclude='test-results' \
+            --exclude='playwright-report' \
+            ./ _site/
+
           cp Disciplina3/Projeto/projeto-final/dist/index.html Disciplina3/Projeto/projeto-final/dist/404.html
-          cp -r Disciplina3/Projeto/projeto-final/dist/. _site/Disciplina3/Projeto/projeto-final/dist/
+          cp -r Disciplina3/Projeto/projeto-final/dist/. _site/
           touch _site/.nojekyll
 
       - name: Setup Pages
