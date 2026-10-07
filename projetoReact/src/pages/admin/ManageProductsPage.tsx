@@ -38,7 +38,7 @@ export const ManageProductsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [debouncedSearch] = useDebouncedValue(searchQuery, 400);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  
+
   const dynamicItemsPerPage = Math.max(10, Math.ceil(total / 10));
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
@@ -123,10 +123,10 @@ export const ManageProductsPage: React.FC = () => {
           prev.map((p) =>
             p.id === editingProduct.id
               ? {
-                  ...p,
-                  ...values,
-                  thumbnail: values.thumbnail || p.thumbnail,
-                }
+                ...p,
+                ...values,
+                thumbnail: values.thumbnail || p.thumbnail,
+              }
               : p,
           ),
         );
@@ -288,7 +288,7 @@ export const ManageProductsPage: React.FC = () => {
                   </Group>
                   <Flex align="center" justify="space-between" mt={{ base: 'sm', md: 0 }} wrap={{ base: 'wrap', md: 'nowrap' }} gap="sm">
                     <Box w={{ base: 'auto', md: 150 }}>
-                      <Badge variant="light" color="indigo" size="sm">{p.category}</Badge>
+                      <Badge variant="light" color="blue.3" size="sm">{p.category}</Badge>
                     </Box>
                     <Box w={{ base: 'auto', md: 120 }}>
                       <Text size="sm" fw={600}>{formatPrice(p.price)}</Text>
@@ -335,7 +335,7 @@ export const ManageProductsPage: React.FC = () => {
             value={page}
             onChange={setPage}
             disabled={isLoading}
-            color="indigo"
+            color="blue.3"
             radius="md"
             size="sm"
             siblings={1}
@@ -414,7 +414,7 @@ export const ManageProductsPage: React.FC = () => {
               <Button variant="default" onClick={() => setIsModalOpen(false)}>
                 Cancelar
               </Button>
-              <Button type="submit" color="indigo" loading={isSubmitting}>
+              <Button type="submit" color="blue.3" loading={isSubmitting}>
                 {editingProduct ? 'Salvar Alterações' : 'Cadastrar Produto'}
               </Button>
             </Group>
