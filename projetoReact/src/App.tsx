@@ -1,20 +1,31 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Center, Loader } from '@mantine/core';
 import { AuthProvider } from './contexts/AuthContext';
 import { CartProvider } from './contexts/CartContext';
-import AppLayout from './layouts/AppLayout';
-import AdminLayout from './layouts/AdminLayout';
 import ProtectedRoute from './routes/ProtectedRoute';
-import ProductsPage from './pages/public/ProductsPage';
-import ProductDetailPage from './pages/public/ProductDetailPage';
-import CartPage from './pages/public/CartPage';
-import LoginPage from './pages/public/LoginPage';
-import ManageProductsPage from './pages/admin/ManageProductsPage';
+
+// Code-splitting: cada layout/página vira um chunk carregado sob demanda
+const AppLayout = lazy(() => import('./layouts/AppLayout'));
+const AdminLayout = lazy(() => import('./layouts/AdminLayout'));
+const ProductsPage = lazy(() => import('./pages/public/ProductsPage'));
+const ProductDetailPage = lazy(() => import('./pages/public/ProductDetailPage'));
+const CartPage = lazy(() => import('./pages/public/CartPage'));
+const LoginPage = lazy(() => import('./pages/public/LoginPage'));
+const ManageProductsPage = lazy(() => import('./pages/admin/ManageProductsPage'));
+
+const PageLoader = () => (
+  <Center h="100vh">
+    <Loader />
+  </Center>
+);
 
 export function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <AuthProvider>
         <CartProvider>
+          <Suspense fallback={<PageLoader />}>
           <Routes>
             {/* Rotas publicas e layout */}
             <Route element={<AppLayout />}>
@@ -34,6 +45,7 @@ export function App() {
             {/* Se não encontrar redireciona para a página principal */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          </Suspense>
         </CartProvider>
       </AuthProvider>
     </BrowserRouter>

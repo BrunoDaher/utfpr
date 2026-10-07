@@ -15,7 +15,7 @@ import {
   Flex,
 } from '@mantine/core';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Cart as BsCart, ArrowLeftCircle as BsArrowLeft, ExclamationCircle as BsExclamationCircle, CheckLg as BsCheckLg, Truck as BsTruck, ShieldCheck as BsShieldCheck, PlusLg as BsPlusLg, DashLg as BsDashLg } from 'react-bootstrap-icons';
+import { Cart as BsCart, ArrowLeftCircle as BsArrowLeft, ExclamationCircle as BsExclamationCircle, CheckLg as BsCheckLg, Truck as BsTruck, ShieldCheck as BsShieldCheck } from 'react-bootstrap-icons';
 import { productService } from '../../services/productService';
 import { Product } from '../../schemas/product.schema';
 import { useCart } from '../../hooks/useCart';
@@ -28,7 +28,7 @@ export const ProductDetailPage: React.FC = () => {
 
   const [product, setProduct] = useState<Product | null>(null);
   const [selectedImage, setSelectedImage] = useState<string>('');
-  const [quantity, setQuantity] = useState<number>(1);
+  const [quantity] = useState<number>(1);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
